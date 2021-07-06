@@ -1,0 +1,12 @@
+export { AggregateDomainArgs } from "./AggregateDomainArgs.arg";
+export { CreateDomainArgs } from "./CreateDomainArgs.arg";
+export { CreateManyDomainArgs } from "./CreateManyDomainArgs.arg";
+export { DeleteDomainArgs } from "./DeleteDomainArgs.arg";
+export { DeleteManyDomainArgs } from "./DeleteManyDomainArgs.arg";
+export { FindFirstDomainArgs } from "./FindFirstDomainArgs.arg";
+export { FindManyDomainArgs } from "./FindManyDomainArgs.arg";
+export { FindUniqueDomainArgs } from "./FindUniqueDomainArgs.arg";
+export { GroupByDomainArgs } from "./GroupByDomainArgs.arg";
+export { UpdateDomainArgs } from "./UpdateDomainArgs.arg";
+export { UpdateManyDomainArgs } from "./UpdateManyDomainArgs.arg";
+export { UpsertDomainArgs } from "./UpsertDomainArgs.arg";

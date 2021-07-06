@@ -389,7 +389,7 @@ import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../scalars\\";
 import { SecondModel } from \\"../models/SecondModel.model\\";
-import { FirstModelCount } from \\"../resolvers/outputs/FirstModelCount\\";
+import { FirstModelCount } from \\"../resolvers/outputs/FirstModelCount.output\\";
 
 @TypeGraphQL.ObjectType({
   isAbstract: true

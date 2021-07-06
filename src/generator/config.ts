@@ -78,7 +78,12 @@ export const fileSuffixes = {
 
 type FolderNameKey = keyof typeof fileSuffixes;
 
-export const getFileSuffix = (str: any) => {
+export const getFileSuffix = (str: string) => {
+  // Get correct type from e.g. 'resolvers/outputs'
+  if (str.includes("/")) {
+    const parts = str.split("/");
+    str = parts[parts.length - 1];
+  }
   const key = str as FolderNameKey;
   return fileSuffixes[key] ? `.${fileSuffixes[key].suffix}` : "";
 };

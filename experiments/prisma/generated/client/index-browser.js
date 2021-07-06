@@ -70,71 +70,61 @@ Prisma.validator = () => (val) => val
 // https://github.com/microsoft/TypeScript/issues/3192#issuecomment-261720275
 function makeEnum(x) { return x; }
 
-exports.Prisma.UserScalarFieldEnum = makeEnum({
+exports.Prisma.TrafficSourceScalarFieldEnum = makeEnum({
   id: 'id',
-  email: 'email',
   name: 'name',
-  age: 'age',
-  balance: 'balance',
-  amount: 'amount',
-  role: 'role',
-  grades: 'grades',
-  aliases: 'aliases'
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 });
 
-exports.Prisma.PostScalarFieldEnum = makeEnum({
-  uuid: 'uuid',
+exports.Prisma.ClickDataScalarFieldEnum = makeEnum({
+  id: 'id',
+  trafficSourceId: 'trafficSourceId',
+  date: 'date',
+  campaignId: 'campaignId',
+  campaignName: 'campaignName',
+  adId: 'adId',
+  device: 'device',
+  country: 'country',
+  domainId: 'domainId',
+  clicks: 'clicks',
+  spend: 'spend',
+  excludedClicks: 'excludedClicks',
+  conversions: 'conversions',
+  ecpc: 'ecpc',
+  ecpa: 'ecpa',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
+});
+
+exports.Prisma.FunnelAccountScalarFieldEnum = makeEnum({
+  id: 'id',
+  type: 'type',
+  name: 'name',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
-  published: 'published',
-  title: 'title',
-  subtitle: 'subtitle',
-  content: 'content',
-  authorId: 'authorId',
-  editorId: 'editorId',
-  kind: 'kind',
-  metadata: 'metadata'
+  funnelId: 'funnelId'
 });
 
-exports.Prisma.CategoryScalarFieldEnum = makeEnum({
+exports.Prisma.DomainScalarFieldEnum = makeEnum({
+  id: 'id',
   name: 'name',
-  slug: 'slug',
-  number: 'number'
+  state: 'state',
+  creationDate: 'creationDate',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt',
+  funnelAccountId: 'funnelAccountId'
 });
 
-exports.Prisma.PatientScalarFieldEnum = makeEnum({
-  firstName: 'firstName',
-  lastName: 'lastName',
-  email: 'email'
-});
-
-exports.Prisma.MovieScalarFieldEnum = makeEnum({
-  directorFirstName: 'directorFirstName',
-  directorLastName: 'directorLastName',
-  title: 'title'
-});
-
-exports.Prisma.DirectorScalarFieldEnum = makeEnum({
-  firstName: 'firstName',
-  lastName: 'lastName'
-});
-
-exports.Prisma.ProblemScalarFieldEnum = makeEnum({
+exports.Prisma.FunnelScalarFieldEnum = makeEnum({
   id: 'id',
-  problemText: 'problemText',
-  creatorId: 'creatorId'
-});
-
-exports.Prisma.CreatorScalarFieldEnum = makeEnum({
-  id: 'id',
-  name: 'name'
-});
-
-exports.Prisma.NativeTypeModelScalarFieldEnum = makeEnum({
-  id: 'id',
-  bigInt: 'bigInt',
-  byteA: 'byteA',
-  decimal: 'decimal'
+  name: 'name',
+  order: 'order',
+  trafficFirstSeen: 'trafficFirstSeen',
+  cards: 'cards',
+  browserProfile: 'browserProfile',
+  createdAt: 'createdAt',
+  updatedAt: 'updatedAt'
 });
 
 exports.Prisma.SortOrder = makeEnum({
@@ -146,26 +136,25 @@ exports.Prisma.QueryMode = makeEnum({
   default: 'default',
   insensitive: 'insensitive'
 });
-exports.Role = makeEnum({
-  USER: 'USER',
-  ADMIN: 'ADMIN'
+exports.TrafficSourceName = makeEnum({
+  CONTENT_AD: 'CONTENT_AD',
+  OUTBRAIN: 'OUTBRAIN',
+  TABOOLA: 'TABOOLA'
 });
 
-exports.PostKind = makeEnum({
-  BLOG: 'BLOG',
-  ADVERT: 'ADVERT'
+exports.AccountType = makeEnum({
+  BING_ADS: 'BING_ADS',
+  GOOGLE_ADS: 'GOOGLE_ADS',
+  CLICKBANK: 'CLICKBANK',
+  MAXWEB: 'MAXWEB'
 });
 
 exports.Prisma.ModelName = makeEnum({
-  User: 'User',
-  post: 'post',
-  Category: 'Category',
-  Patient: 'Patient',
-  Movie: 'Movie',
-  Director: 'Director',
-  Problem: 'Problem',
-  Creator: 'Creator',
-  NativeTypeModel: 'NativeTypeModel'
+  TrafficSource: 'TrafficSource',
+  ClickData: 'ClickData',
+  FunnelAccount: 'FunnelAccount',
+  Domain: 'Domain',
+  Funnel: 'Funnel'
 });
 
 /**
