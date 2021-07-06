@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateMovieArgs } from "./args/AggregateMovieArgs";
-import { Movie } from "../../../models/Movie";
+import { Movie } from "../../../models/Movie.model";
 import { AggregateMovie } from "../../outputs/AggregateMovie";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
 import { GroupByDirectorArgs } from "./args/GroupByDirectorArgs";
-import { Director } from "../../../models/Director";
+import { Director } from "../../../models/Director.model";
 import { DirectorGroupBy } from "../../outputs/DirectorGroupBy";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

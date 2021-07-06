@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
 import { FindFirstProblemArgs } from "./args/FindFirstProblemArgs";
-import { Problem } from "../../../models/Problem";
+import { Problem } from "../../../models/Problem.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Problem)

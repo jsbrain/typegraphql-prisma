@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
-import { Client } from "../../../models/Client";
-import { Post } from "../../../models/Post";
+import { Client } from "../../../models/Client.model";
+import { Post } from "../../../models/Post.model";
 import { ClientPostsArgs } from "./args/ClientPostsArgs";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

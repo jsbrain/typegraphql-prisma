@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
 import { AggregateCategoryArgs } from "./args/AggregateCategoryArgs";
-import { Category } from "../../../models/Category";
+import { Category } from "../../../models/Category.model";
 import { AggregateCategory } from "../../outputs/AggregateCategory";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

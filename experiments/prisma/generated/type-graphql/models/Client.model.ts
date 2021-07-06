@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../client";
 import { DecimalJSScalar } from "../scalars";
-import { Post } from "../models/Post";
+import { Post } from "../models/Post.model";
 import { Role } from "../enums/Role";
 import { ClientCount } from "../resolvers/outputs/ClientCount";
 

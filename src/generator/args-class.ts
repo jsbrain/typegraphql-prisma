@@ -1,20 +1,19 @@
+import path from "path";
 import {
-  PropertyDeclarationStructure,
   OptionalKind,
   Project,
+  PropertyDeclarationStructure,
   Writers,
 } from "ts-morph";
-import path from "path";
-
-import { argsFolderName } from "./config";
-import {
-  generateTypeGraphQLImport,
-  generateInputsImports,
-  generateEnumsImports,
-  generateGraphQLScalarsImport,
-} from "./imports";
+import { argsFolderName, getFileSuffix } from "./config";
 import { DmmfDocument } from "./dmmf/dmmf-document";
 import { DMMF } from "./dmmf/types";
+import {
+  generateEnumsImports,
+  generateGraphQLScalarsImport,
+  generateInputsImports,
+  generateTypeGraphQLImport,
+} from "./imports";
 
 export default function generateArgsTypeClassFromArgs(
   project: Project,
@@ -25,7 +24,10 @@ export default function generateArgsTypeClassFromArgs(
   inputImportsLevel = 3,
 ) {
   const dirPath = path.resolve(generateDirPath, argsFolderName);
-  const filePath = path.resolve(dirPath, `${argsTypeName}.ts`);
+  const filePath = path.resolve(
+    dirPath,
+    `${argsTypeName}${getFileSuffix(argsFolderName)}.ts`,
+  );
   const sourceFile = project.createSourceFile(filePath, undefined, {
     overwrite: true,
   });

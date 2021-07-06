@@ -14,7 +14,7 @@ import { UpdateManyNativeTypeModelArgs } from "./args/UpdateManyNativeTypeModelA
 import { UpdateNativeTypeModelArgs } from "./args/UpdateNativeTypeModelArgs";
 import { UpsertNativeTypeModelArgs } from "./args/UpsertNativeTypeModelArgs";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
-import { NativeTypeModel } from "../../../models/NativeTypeModel";
+import { NativeTypeModel } from "../../../models/NativeTypeModel.model";
 import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
 import { AggregateNativeTypeModel } from "../../outputs/AggregateNativeTypeModel";
 import { NativeTypeModelGroupBy } from "../../outputs/NativeTypeModelGroupBy";

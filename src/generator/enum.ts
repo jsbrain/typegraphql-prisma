@@ -1,9 +1,8 @@
-import { EnumMemberStructure, OptionalKind, Project } from "ts-morph";
 import path from "path";
-
-import { generateTypeGraphQLImport } from "./imports";
-import { enumsFolderName } from "./config";
+import { EnumMemberStructure, OptionalKind, Project } from "ts-morph";
+import { enumsFolderName, getFileSuffix } from "./config";
 import { DMMF } from "./dmmf/types";
+import { generateTypeGraphQLImport } from "./imports";
 
 export default function generateEnumFromDef(
   project: Project,
@@ -11,7 +10,10 @@ export default function generateEnumFromDef(
   enumDef: DMMF.Enum,
 ) {
   const dirPath = path.resolve(baseDirPath, enumsFolderName);
-  const filePath = path.resolve(dirPath, `${enumDef.typeName}.ts`);
+  const filePath = path.resolve(
+    dirPath,
+    `${enumDef.typeName}${getFileSuffix(enumsFolderName)}.ts`,
+  );
   const sourceFile = project.createSourceFile(filePath, undefined, {
     overwrite: true,
   });

@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
 import { GroupByProblemArgs } from "./args/GroupByProblemArgs";
-import { Problem } from "../../../models/Problem";
+import { Problem } from "../../../models/Problem.model";
 import { ProblemGroupBy } from "../../outputs/ProblemGroupBy";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

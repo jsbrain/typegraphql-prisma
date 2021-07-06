@@ -45,3 +45,25 @@ export const resolversFolderName = "resolvers";
 export const argsFolderName = "args";
 export const relationsResolversFolderName = "relations";
 export const crudResolversFolderName = "crud";
+
+export const modelsSuffix = "model";
+export const enumsSuffix = "enum";
+export const inputsSuffix = "input";
+export const outputsSuffix = "output";
+export const resolversSuffix = "resolver";
+export const argsSuffix = "arg";
+export const relationsResolversSuffix = "relation";
+export const crudResolversSuffix = "crud";
+
+export const fileSuffixes = {
+  [modelsFolderName]: {
+    suffix: modelsSuffix,
+  },
+};
+
+type FolderNameKey = keyof typeof fileSuffixes;
+
+export const getFileSuffix = (str: any) => {
+  const key = str as FolderNameKey;
+  return fileSuffixes[key] ? `.${fileSuffixes[key].suffix}` : "";
+};

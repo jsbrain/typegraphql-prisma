@@ -14,7 +14,7 @@ import { UpdateManyMovieArgs } from "./args/UpdateManyMovieArgs";
 import { UpdateMovieArgs } from "./args/UpdateMovieArgs";
 import { UpsertMovieArgs } from "./args/UpsertMovieArgs";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
-import { Movie } from "../../../models/Movie";
+import { Movie } from "../../../models/Movie.model";
 import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
 import { AggregateMovie } from "../../outputs/AggregateMovie";
 import { MovieGroupBy } from "../../outputs/MovieGroupBy";

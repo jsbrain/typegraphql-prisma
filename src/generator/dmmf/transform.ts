@@ -1,19 +1,19 @@
 import { DMMF as PrismaDMMF } from "@prisma/client/runtime";
-import { DMMF } from "./types";
-import { parseDocumentationAttributes } from "./helpers";
+import pluralize from "pluralize";
+import { supportedMutationActions, supportedQueryActions } from "../config";
 import {
-  getInputTypeName,
   camelCase,
+  cleanDocsString,
+  getFieldTSType,
+  getInputTypeName,
   getModelNameFromInputType,
   getTypeGraphQLType,
-  getFieldTSType,
   pascalCase,
-  cleanDocsString,
 } from "../helpers";
-import { DmmfDocument } from "./dmmf-document";
-import pluralize from "pluralize";
 import { GenerateCodeOptions } from "../options";
-import { supportedQueryActions, supportedMutationActions } from "../config";
+import { DmmfDocument } from "./dmmf-document";
+import { parseDocumentationAttributes } from "./helpers";
+import { DMMF } from "./types";
 
 export function transformSchema(
   datamodel: PrismaDMMF.Schema,

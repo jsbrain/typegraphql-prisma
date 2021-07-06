@@ -1,14 +1,14 @@
 import { DMMF as PrismaDMMF } from "@prisma/client/runtime";
-import { DMMF } from "./types";
-import {
-  transformSchema,
-  transformMappings,
-  transformBareModel,
-  transformModelWithFields,
-  transformEnums,
-  generateRelationModel,
-} from "./transform";
 import { GenerateCodeOptions } from "../options";
+import {
+  generateRelationModel,
+  transformBareModel,
+  transformEnums,
+  transformMappings,
+  transformModelWithFields,
+  transformSchema,
+} from "./transform";
+import { DMMF } from "./types";
 
 export class DmmfDocument implements DMMF.Document {
   private models: DMMF.Model[];

@@ -1,6 +1,5 @@
 import { promises as fs } from "fs";
-
-import generateArtifactsDirPath from "../helpers/artifacts-dir";
+import { default as generateArtifactsDirPath } from "../helpers/artifacts-dir";
 import { generateCodeFromSchema } from "../helpers/generate-code";
 import createReadGeneratedFile, {
   ReadGeneratedFile,
@@ -31,7 +30,7 @@ describe("models", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const userModelTSFile = await readGeneratedFile("/models/User.ts");
+    const userModelTSFile = await readGeneratedFile("/models/User.model.ts");
 
     expect(userModelTSFile).toMatchSnapshot("User");
   });
@@ -52,7 +51,7 @@ describe("models", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const userModelTSFile = await readGeneratedFile("/models/User.ts");
+    const userModelTSFile = await readGeneratedFile("/models/User.model.ts");
 
     expect(userModelTSFile).toMatchSnapshot("User");
   });
@@ -71,8 +70,8 @@ describe("models", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const userModelTSFile = await readGeneratedFile("/models/User.ts");
-    const postModelTSFile = await readGeneratedFile("/models/Post.ts");
+    const userModelTSFile = await readGeneratedFile("/models/User.model.ts");
+    const postModelTSFile = await readGeneratedFile("/models/Post.model.ts");
 
     expect(userModelTSFile).toMatchSnapshot("User");
     expect(postModelTSFile).toMatchSnapshot("Post");
@@ -90,7 +89,9 @@ describe("models", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const serviceModelTSFile = await readGeneratedFile("/models/Service.ts");
+    const serviceModelTSFile = await readGeneratedFile(
+      "/models/Service.model.ts",
+    );
 
     expect(serviceModelTSFile).toMatchSnapshot("Service");
   });
@@ -116,7 +117,7 @@ describe("models", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const userModelTSFile = await readGeneratedFile("/models/User.ts");
+    const userModelTSFile = await readGeneratedFile("/models/User.model.ts");
 
     expect(userModelTSFile).toMatchSnapshot("User");
   });
@@ -137,8 +138,12 @@ describe("models", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const clientModelTSFile = await readGeneratedFile("/models/Client.ts");
-    const articleModelTSFile = await readGeneratedFile("/models/Article.ts");
+    const clientModelTSFile = await readGeneratedFile(
+      "/models/Client.model.ts",
+    );
+    const articleModelTSFile = await readGeneratedFile(
+      "/models/Article.model.ts",
+    );
 
     expect(clientModelTSFile).toMatchSnapshot("Client");
     expect(articleModelTSFile).toMatchSnapshot("Article");
@@ -165,7 +170,7 @@ describe("models", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const userModelTSFile = await readGeneratedFile("/models/User.ts");
+    const userModelTSFile = await readGeneratedFile("/models/User.model.ts");
 
     expect(userModelTSFile).toMatchSnapshot("User");
   });
@@ -182,7 +187,7 @@ describe("models", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const userModelTSFile = await readGeneratedFile("/models/User.ts");
+    const userModelTSFile = await readGeneratedFile("/models/User.model.ts");
 
     expect(userModelTSFile).toMatchSnapshot("User");
   });
@@ -200,7 +205,7 @@ describe("models", () => {
       outputDirPath,
       simpleResolvers: true,
     });
-    const userModelTSFile = await readGeneratedFile("/models/User.ts");
+    const userModelTSFile = await readGeneratedFile("/models/User.model.ts");
 
     expect(userModelTSFile).toMatchSnapshot("User");
   });
@@ -217,7 +222,7 @@ describe("models", () => {
 
     await generateCodeFromSchema(schema, { outputDirPath });
     const nativeTypeModelTSFile = await readGeneratedFile(
-      "/models/NativeTypeModel.ts",
+      "/models/NativeTypeModel.model.ts",
     );
 
     expect(nativeTypeModelTSFile).toMatchSnapshot("NativeTypeModel");
@@ -245,7 +250,9 @@ describe("models", () => {
         outputDirPath,
         previewFeatures: ["selectRelationCount"],
       });
-      const firstModelTSFile = await readGeneratedFile("/models/FirstModel.ts");
+      const firstModelTSFile = await readGeneratedFile(
+        "/models/FirstModel.model.ts",
+      );
 
       expect(firstModelTSFile).toMatchSnapshot("FirstModel");
     });

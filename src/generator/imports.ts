@@ -1,23 +1,23 @@
+import path from "path";
 import {
-  SourceFile,
-  OptionalKind,
   ExportDeclarationStructure,
+  OptionalKind,
+  SourceFile,
   VariableDeclarationKind,
 } from "ts-morph";
-import path from "path";
-
 import {
-  modelsFolderName,
-  enumsFolderName,
-  inputsFolderName,
   argsFolderName,
-  outputsFolderName,
-  resolversFolderName,
   crudResolversFolderName,
+  enumsFolderName,
+  getFileSuffix,
+  inputsFolderName,
+  modelsFolderName,
+  outputsFolderName,
   relationsResolversFolderName,
+  resolversFolderName,
 } from "./config";
-import { GenerateMappingData } from "./types";
 import { GenerateCodeOptions } from "./options";
+import { GenerateMappingData } from "./types";
 
 export function generateTypeGraphQLImport(sourceFile: SourceFile) {
   sourceFile.addImportDeclaration({
@@ -98,7 +98,7 @@ export function generateArgsBarrelFile(
     argsTypeNames
       .sort()
       .map<OptionalKind<ExportDeclarationStructure>>(argTypeName => ({
-        moduleSpecifier: `./${argTypeName}`,
+        moduleSpecifier: `./${argTypeName}${getFileSuffix(argsFolderName)}`,
         namedExports: [argTypeName],
       })),
   );
@@ -125,7 +125,7 @@ export function generateModelsBarrelFile(
     modelNames
       .sort()
       .map<OptionalKind<ExportDeclarationStructure>>(modelName => ({
-        moduleSpecifier: `./${modelName}`,
+        moduleSpecifier: `./${modelName}${getFileSuffix(modelsFolderName)}`,
         namedExports: [modelName],
       })),
   );
@@ -139,7 +139,7 @@ export function generateEnumsBarrelFile(
     enumTypeNames
       .sort()
       .map<OptionalKind<ExportDeclarationStructure>>(enumTypeName => ({
-        moduleSpecifier: `./${enumTypeName}`,
+        moduleSpecifier: `./${enumTypeName}${getFileSuffix(enumsFolderName)}`,
         namedExports: [enumTypeName],
       })),
   );
@@ -153,7 +153,7 @@ export function generateInputsBarrelFile(
     inputTypeNames
       .sort()
       .map<OptionalKind<ExportDeclarationStructure>>(inputTypeName => ({
-        moduleSpecifier: `./${inputTypeName}`,
+        moduleSpecifier: `./${inputTypeName}${getFileSuffix(inputsFolderName)}`,
         namedExports: [inputTypeName],
       })),
   );
@@ -168,7 +168,9 @@ export function generateOutputsBarrelFile(
     outputTypeNames
       .sort()
       .map<OptionalKind<ExportDeclarationStructure>>(outputTypeName => ({
-        moduleSpecifier: `./${outputTypeName}`,
+        moduleSpecifier: `./${outputTypeName}${getFileSuffix(
+          outputsFolderName,
+        )}`,
         namedExports: [outputTypeName],
       })),
   );
@@ -330,7 +332,7 @@ function createImportGenerator(elementsDirName: string) {
           path.posix.join(
             ...Array(level).fill(".."),
             elementsDirName,
-            elementName,
+            `${elementName}${getFileSuffix(elementsDirName)}`,
           ),
         // TODO: refactor to default exports
         // defaultImport: elementName,

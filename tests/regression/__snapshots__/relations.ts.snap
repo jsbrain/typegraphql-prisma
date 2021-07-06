@@ -2,9 +2,9 @@
 
 exports[`relations resolvers generation should properly generate composite keys where phrase in resolver: UsersOnProjectsRelationsResolver 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Project } from \\"../../../models/Project\\";
-import { User } from \\"../../../models/User\\";
-import { UsersOnProjects } from \\"../../../models/UsersOnProjects\\";
+import { Project } from \\"../../../models/Project.model\\";
+import { User } from \\"../../../models/User.model\\";
+import { UsersOnProjects } from \\"../../../models/UsersOnProjects.model\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
 @TypeGraphQL.Resolver(_of => UsersOnProjects)
@@ -110,8 +110,8 @@ export { UserRelationsResolver } from \\"./User/UserRelationsResolver\\";
 
 exports[`relations resolvers generation should properly generate relation resolver class for model with multi id keys with relation: MovieRelationsResolver 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Director } from \\"../../../models/Director\\";
-import { Movie } from \\"../../../models/Movie\\";
+import { Director } from \\"../../../models/Director.model\\";
+import { Movie } from \\"../../../models/Movie.model\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
 @TypeGraphQL.Resolver(_of => Movie)
@@ -136,8 +136,8 @@ export class MovieRelationsResolver {
 
 exports[`relations resolvers generation should properly generate relation resolver class for model with unique fields: DirectorRelationsResolver 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Director } from \\"../../../models/Director\\";
-import { Movie } from \\"../../../models/Movie\\";
+import { Director } from \\"../../../models/Director.model\\";
+import { Movie } from \\"../../../models/Movie.model\\";
 import { DirectorMoviesArgs } from \\"./args/DirectorMoviesArgs\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
@@ -162,8 +162,8 @@ export class DirectorRelationsResolver {
 
 exports[`relations resolvers generation should properly generate relation resolvers classes for models with omitted relation field: PostRelationsResolver 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Post } from \\"../../../models/Post\\";
-import { User } from \\"../../../models/User\\";
+import { Post } from \\"../../../models/Post.model\\";
+import { User } from \\"../../../models/User.model\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
 @TypeGraphQL.Resolver(_of => Post)
@@ -184,8 +184,8 @@ export class PostRelationsResolver {
 
 exports[`relations resolvers generation should properly generate relation resolvers classes for models with omitted relation field: UserRelationsResolver 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Post } from \\"../../../models/Post\\";
-import { User } from \\"../../../models/User\\";
+import { Post } from \\"../../../models/Post.model\\";
+import { User } from \\"../../../models/User.model\\";
 import { UserPostsArgs } from \\"./args/UserPostsArgs\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
@@ -207,8 +207,8 @@ export class UserRelationsResolver {
 
 exports[`relations resolvers generation should properly generate relation resolvers classes for models with renamed relation fields: PostRelationsResolver 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Post } from \\"../../../models/Post\\";
-import { User } from \\"../../../models/User\\";
+import { Post } from \\"../../../models/Post.model\\";
+import { User } from \\"../../../models/User.model\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
 @TypeGraphQL.Resolver(_of => Post)
@@ -230,8 +230,8 @@ export class PostRelationsResolver {
 
 exports[`relations resolvers generation should properly generate relation resolvers classes for models with renamed relation fields: UserRelationsResolver 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Post } from \\"../../../models/Post\\";
-import { User } from \\"../../../models/User\\";
+import { Post } from \\"../../../models/Post.model\\";
+import { User } from \\"../../../models/User.model\\";
 import { UserPostsArgs } from \\"./args/UserPostsArgs\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
@@ -296,8 +296,8 @@ export class UserPostsArgs {
 
 exports[`relations resolvers generation should properly generate resolver and args class for array relation resolvers: UserRelationsResolver 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Post } from \\"../../../models/Post\\";
-import { User } from \\"../../../models/User\\";
+import { Post } from \\"../../../models/Post.model\\";
+import { User } from \\"../../../models/User.model\\";
 import { UserPostsArgs } from \\"./args/UserPostsArgs\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
@@ -319,8 +319,8 @@ export class UserRelationsResolver {
 
 exports[`relations resolvers generation should properly generate resolver class for single relation resolvers: UserRelationsResolver 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Address } from \\"../../../models/Address\\";
-import { User } from \\"../../../models/User\\";
+import { Address } from \\"../../../models/Address.model\\";
+import { User } from \\"../../../models/User.model\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
 @TypeGraphQL.Resolver(_of => User)
@@ -341,8 +341,8 @@ export class UserRelationsResolver {
 
 exports[`relations resolvers generation should properly generate resolvers classes for prisma models with cyclic relations: Post 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Post } from \\"../../../models/Post\\";
-import { User } from \\"../../../models/User\\";
+import { Post } from \\"../../../models/Post.model\\";
+import { User } from \\"../../../models/User.model\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 
 @TypeGraphQL.Resolver(_of => Post)
@@ -364,8 +364,8 @@ export class PostRelationsResolver {
 
 exports[`relations resolvers generation should properly generate resolvers classes for prisma models with cyclic relations: User 1`] = `
 "import * as TypeGraphQL from \\"type-graphql\\";
-import { Post } from \\"../../../models/Post\\";
-import { User } from \\"../../../models/User\\";
+import { Post } from \\"../../../models/Post.model\\";
+import { User } from \\"../../../models/User.model\\";
 import { UserPostsArgs } from \\"./args/UserPostsArgs\\";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from \\"../../../helpers\\";
 

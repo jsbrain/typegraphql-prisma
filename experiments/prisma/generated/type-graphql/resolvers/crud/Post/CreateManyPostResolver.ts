@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
 import { CreateManyPostArgs } from "./args/CreateManyPostArgs";
-import { Post } from "../../../models/Post";
+import { Post } from "../../../models/Post.model";
 import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

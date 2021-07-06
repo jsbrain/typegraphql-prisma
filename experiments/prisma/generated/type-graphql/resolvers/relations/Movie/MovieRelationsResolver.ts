@@ -1,6 +1,6 @@
 import * as TypeGraphQL from "type-graphql";
-import { Director } from "../../../models/Director";
-import { Movie } from "../../../models/Movie";
+import { Director } from "../../../models/Director.model";
+import { Movie } from "../../../models/Movie.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Movie)

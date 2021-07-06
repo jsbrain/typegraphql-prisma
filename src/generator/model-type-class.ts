@@ -1,24 +1,23 @@
+import path from "path";
 import {
-  PropertyDeclarationStructure,
+  GetAccessorDeclarationStructure,
   OptionalKind,
   Project,
-  GetAccessorDeclarationStructure,
+  PropertyDeclarationStructure,
   Writers,
 } from "ts-morph";
-import path from "path";
-
+import { getFileSuffix, modelsFolderName } from "./config";
+import { DmmfDocument } from "./dmmf/dmmf-document";
+import { DMMF } from "./dmmf/types";
 import {
-  generateTypeGraphQLImport,
-  generateModelsImports,
+  generateCustomScalarsImport,
   generateEnumsImports,
   generateGraphQLScalarsImport,
+  generateModelsImports,
   generatePrismaNamespaceImport,
-  generateCustomScalarsImport,
   generateResolversOutputsImports,
+  generateTypeGraphQLImport,
 } from "./imports";
-import { modelsFolderName } from "./config";
-import { DMMF } from "./dmmf/types";
-import { DmmfDocument } from "./dmmf/dmmf-document";
 
 export default function generateObjectTypeClassFromModel(
   project: Project,
@@ -28,7 +27,10 @@ export default function generateObjectTypeClassFromModel(
   dmmfDocument: DmmfDocument,
 ) {
   const dirPath = path.resolve(baseDirPath, modelsFolderName);
-  const filePath = path.resolve(dirPath, `${model.typeName}.ts`);
+  const filePath = path.resolve(
+    dirPath,
+    `${model.typeName}${getFileSuffix(modelsFolderName)}.ts`,
+  );
   const sourceFile = project.createSourceFile(filePath, undefined, {
     overwrite: true,
   });

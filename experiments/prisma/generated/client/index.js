@@ -185,11 +185,15 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "/home/majkel/development/typegraphql-prisma/experiments/prisma/generated/client",
+      "value": "/Users/macpro/Code/typegraphql-prisma/experiments/prisma/generated/client",
       "fromEnvVar": null
     },
     "config": {},
     "binaryTargets": [
+      {
+        "fromEnvVar": null,
+        "value": "darwin"
+      },
       {
         "fromEnvVar": null,
         "value": "windows"
@@ -209,8 +213,7 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": null,
-    "schemaEnvPath": "../../.env"
+    "rootEnvPath": null
   },
   "relativePath": "../..",
   "clientVersion": "2.26.0",
@@ -243,6 +246,9 @@ Object.assign(exports, Prisma)
  * In order to make `ncc` and `@vercel/nft` happy.
  * The process.cwd() annotation is only needed for https://github.com/vercel/vercel/tree/master/packages/now-next
 **/
+path.join(__dirname, 'libquery_engine-darwin.dylib.node');
+path.join(process.cwd(), './prisma/generated/client/libquery_engine-darwin.dylib.node');
+
 path.join(__dirname, 'query_engine-windows.dll.node');
 path.join(process.cwd(), './prisma/generated/client/query_engine-windows.dll.node');
 

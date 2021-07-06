@@ -2,7 +2,7 @@ import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../client";
 import { DecimalJSScalar } from "../scalars";
-import { Problem } from "../models/Problem";
+import { Problem } from "../models/Problem.model";
 import { CreatorCount } from "../resolvers/outputs/CreatorCount";
 
 @TypeGraphQL.ObjectType({

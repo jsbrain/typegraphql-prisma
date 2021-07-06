@@ -14,7 +14,7 @@ import { UpdateDirectorArgs } from "./args/UpdateDirectorArgs";
 import { UpdateManyDirectorArgs } from "./args/UpdateManyDirectorArgs";
 import { UpsertDirectorArgs } from "./args/UpsertDirectorArgs";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
-import { Director } from "../../../models/Director";
+import { Director } from "../../../models/Director.model";
 import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
 import { AggregateDirector } from "../../outputs/AggregateDirector";
 import { DirectorGroupBy } from "../../outputs/DirectorGroupBy";

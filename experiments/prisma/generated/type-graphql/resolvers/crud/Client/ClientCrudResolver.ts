@@ -14,7 +14,7 @@ import { UpdateClientArgs } from "./args/UpdateClientArgs";
 import { UpdateManyClientArgs } from "./args/UpdateManyClientArgs";
 import { UpsertClientArgs } from "./args/UpsertClientArgs";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
-import { Client } from "../../../models/Client";
+import { Client } from "../../../models/Client.model";
 import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
 import { AggregateClient } from "../../outputs/AggregateClient";
 import { ClientGroupBy } from "../../outputs/ClientGroupBy";
