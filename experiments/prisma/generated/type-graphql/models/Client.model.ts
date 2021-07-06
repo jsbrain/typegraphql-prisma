@@ -3,7 +3,7 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../client";
 import { DecimalJSScalar } from "../scalars";
 import { Post } from "../models/Post.model";
-import { Role } from "../enums/Role";
+import { Role } from "../enums/Role.enum";
 import { ClientCount } from "../resolvers/outputs/ClientCount";
 
 /** User model doc */

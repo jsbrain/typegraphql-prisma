@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { CreateClientArgs } from "./args/CreateClientArgs";
+import { CreateClientArgs } from "./args/CreateClientArgs.arg";
 import { Client } from "../../../models/Client.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

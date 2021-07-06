@@ -1,5 +1,4 @@
 import { promises as fs } from "fs";
-
 import generateArtifactsDirPath from "../helpers/artifacts-dir";
 import { generateCodeFromSchema } from "../helpers/generate-code";
 import createReadGeneratedFile, {
@@ -145,7 +144,7 @@ describe("relations resolvers generation", () => {
 
     await generateCodeFromSchema(schema, { outputDirPath });
     const userPostsArgsTSFile = await readGeneratedFile(
-      "/resolvers/relations/User/args/UserPostsArgs.ts",
+      "/resolvers/relations/User/args/UserPostsArgs.arg.ts",
     );
     const userRelationsResolverTSFile = await readGeneratedFile(
       "/resolvers/relations/User/UserRelationsResolver.ts",
@@ -337,7 +336,7 @@ describe("relations resolvers generation", () => {
         previewFeatures: ["orderByRelation"],
       });
       const firstModelSecondModelsFieldArgsTSFile = await readGeneratedFile(
-        "/resolvers/relations/FirstModel/args/FirstModelSecondModelsFieldArgs.ts",
+        "/resolvers/relations/FirstModel/args/FirstModelSecondModelsFieldArgs.arg.ts",
       );
       const indexTSFile = await readGeneratedFile(
         "/resolvers/relations/FirstModel/args/index.ts",

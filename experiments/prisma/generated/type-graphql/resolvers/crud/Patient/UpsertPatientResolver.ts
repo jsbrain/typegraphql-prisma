@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { UpsertPatientArgs } from "./args/UpsertPatientArgs";
+import { UpsertPatientArgs } from "./args/UpsertPatientArgs.arg";
 import { Patient } from "../../../models/Patient.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

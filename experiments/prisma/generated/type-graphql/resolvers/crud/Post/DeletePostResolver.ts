@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { DeletePostArgs } from "./args/DeletePostArgs";
+import { DeletePostArgs } from "./args/DeletePostArgs.arg";
 import { Post } from "../../../models/Post.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

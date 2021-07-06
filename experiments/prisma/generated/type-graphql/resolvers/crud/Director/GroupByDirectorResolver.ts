@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { GroupByDirectorArgs } from "./args/GroupByDirectorArgs";
+import { GroupByDirectorArgs } from "./args/GroupByDirectorArgs.arg";
 import { Director } from "../../../models/Director.model";
-import { DirectorGroupBy } from "../../outputs/DirectorGroupBy";
+import { DirectorGroupBy } from "../../outputs/DirectorGroupBy.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Director)

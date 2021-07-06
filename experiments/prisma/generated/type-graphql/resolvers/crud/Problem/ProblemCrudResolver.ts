@@ -1,23 +1,23 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateProblemArgs } from "./args/AggregateProblemArgs";
-import { CreateManyProblemArgs } from "./args/CreateManyProblemArgs";
-import { CreateProblemArgs } from "./args/CreateProblemArgs";
-import { DeleteManyProblemArgs } from "./args/DeleteManyProblemArgs";
-import { DeleteProblemArgs } from "./args/DeleteProblemArgs";
-import { FindFirstProblemArgs } from "./args/FindFirstProblemArgs";
-import { FindManyProblemArgs } from "./args/FindManyProblemArgs";
-import { FindUniqueProblemArgs } from "./args/FindUniqueProblemArgs";
-import { GroupByProblemArgs } from "./args/GroupByProblemArgs";
-import { UpdateManyProblemArgs } from "./args/UpdateManyProblemArgs";
-import { UpdateProblemArgs } from "./args/UpdateProblemArgs";
-import { UpsertProblemArgs } from "./args/UpsertProblemArgs";
+import { AggregateProblemArgs } from "./args/AggregateProblemArgs.arg";
+import { CreateManyProblemArgs } from "./args/CreateManyProblemArgs.arg";
+import { CreateProblemArgs } from "./args/CreateProblemArgs.arg";
+import { DeleteManyProblemArgs } from "./args/DeleteManyProblemArgs.arg";
+import { DeleteProblemArgs } from "./args/DeleteProblemArgs.arg";
+import { FindFirstProblemArgs } from "./args/FindFirstProblemArgs.arg";
+import { FindManyProblemArgs } from "./args/FindManyProblemArgs.arg";
+import { FindUniqueProblemArgs } from "./args/FindUniqueProblemArgs.arg";
+import { GroupByProblemArgs } from "./args/GroupByProblemArgs.arg";
+import { UpdateManyProblemArgs } from "./args/UpdateManyProblemArgs.arg";
+import { UpdateProblemArgs } from "./args/UpdateProblemArgs.arg";
+import { UpsertProblemArgs } from "./args/UpsertProblemArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 import { Problem } from "../../../models/Problem.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
-import { AggregateProblem } from "../../outputs/AggregateProblem";
-import { ProblemGroupBy } from "../../outputs/ProblemGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
+import { AggregateProblem } from "../../outputs/AggregateProblem.output";
+import { ProblemGroupBy } from "../../outputs/ProblemGroupBy.output";
 
 @TypeGraphQL.Resolver(_of => Problem)
 export class ProblemCrudResolver {

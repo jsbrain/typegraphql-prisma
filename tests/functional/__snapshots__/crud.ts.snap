@@ -351,30 +351,3 @@ Object {
   },
 }
 `;
-
-exports[`crud resolvers execution basic operations when selectRelationCount preview feature is enabled should properly count relations: firstModel.findFirst call args 1`] = `
-Array [
-  Array [
-    Object {
-      "include": Object {
-        "_count": Object {
-          "select": Object {
-            "secondModelsField": true,
-          },
-        },
-      },
-    },
-  ],
-]
-`;
-
-exports[`crud resolvers execution basic operations when selectRelationCount preview feature is enabled should properly count relations: secondModelsField count mocked response 1`] = `
-Object {
-  "findFirstFirstModel": Object {
-    "_count": Object {
-      "secondModelsField": 2,
-    },
-    "idField": 1,
-  },
-}
-`;

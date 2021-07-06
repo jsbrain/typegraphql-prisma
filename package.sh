@@ -12,7 +12,7 @@ cp -r lib package/lib
 cp package.json Readme.md LICENSE package
 
 echo "Making package.json public..."
-sed -i 's/"private": true/"private": false/' ./package/package.json
+sed -i '' 's/"private": true/"private": false/' ./package/package.json
 
 ELAPSED_TIME=$(($SECONDS - $START_TIME))
 echo "Done in $ELAPSED_TIME seconds!"

@@ -1,23 +1,23 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregatePostArgs } from "./args/AggregatePostArgs";
-import { CreateManyPostArgs } from "./args/CreateManyPostArgs";
-import { CreatePostArgs } from "./args/CreatePostArgs";
-import { DeleteManyPostArgs } from "./args/DeleteManyPostArgs";
-import { DeletePostArgs } from "./args/DeletePostArgs";
-import { FindFirstPostArgs } from "./args/FindFirstPostArgs";
-import { FindManyPostArgs } from "./args/FindManyPostArgs";
-import { FindUniquePostArgs } from "./args/FindUniquePostArgs";
-import { GroupByPostArgs } from "./args/GroupByPostArgs";
-import { UpdateManyPostArgs } from "./args/UpdateManyPostArgs";
-import { UpdatePostArgs } from "./args/UpdatePostArgs";
-import { UpsertPostArgs } from "./args/UpsertPostArgs";
+import { AggregatePostArgs } from "./args/AggregatePostArgs.arg";
+import { CreateManyPostArgs } from "./args/CreateManyPostArgs.arg";
+import { CreatePostArgs } from "./args/CreatePostArgs.arg";
+import { DeleteManyPostArgs } from "./args/DeleteManyPostArgs.arg";
+import { DeletePostArgs } from "./args/DeletePostArgs.arg";
+import { FindFirstPostArgs } from "./args/FindFirstPostArgs.arg";
+import { FindManyPostArgs } from "./args/FindManyPostArgs.arg";
+import { FindUniquePostArgs } from "./args/FindUniquePostArgs.arg";
+import { GroupByPostArgs } from "./args/GroupByPostArgs.arg";
+import { UpdateManyPostArgs } from "./args/UpdateManyPostArgs.arg";
+import { UpdatePostArgs } from "./args/UpdatePostArgs.arg";
+import { UpsertPostArgs } from "./args/UpsertPostArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 import { Post } from "../../../models/Post.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
-import { AggregatePost } from "../../outputs/AggregatePost";
-import { PostGroupBy } from "../../outputs/PostGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
+import { AggregatePost } from "../../outputs/AggregatePost.output";
+import { PostGroupBy } from "../../outputs/PostGroupBy.output";
 
 @TypeGraphQL.Resolver(_of => Post)
 export class PostCrudResolver {

@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { GroupByMovieArgs } from "./args/GroupByMovieArgs";
+import { GroupByMovieArgs } from "./args/GroupByMovieArgs.arg";
 import { Movie } from "../../../models/Movie.model";
-import { MovieGroupBy } from "../../outputs/MovieGroupBy";
+import { MovieGroupBy } from "../../outputs/MovieGroupBy.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Movie)

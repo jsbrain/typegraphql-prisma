@@ -1,5 +1,5 @@
-import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
+import * as TypeGraphQL from "type-graphql";
 import { Prisma } from "../../../client";
 import { DecimalJSScalar } from "../../scalars";
 

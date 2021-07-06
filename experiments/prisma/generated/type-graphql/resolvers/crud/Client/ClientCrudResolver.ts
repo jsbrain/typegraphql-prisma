@@ -1,23 +1,23 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateClientArgs } from "./args/AggregateClientArgs";
-import { CreateClientArgs } from "./args/CreateClientArgs";
-import { CreateManyClientArgs } from "./args/CreateManyClientArgs";
-import { DeleteClientArgs } from "./args/DeleteClientArgs";
-import { DeleteManyClientArgs } from "./args/DeleteManyClientArgs";
-import { FindFirstClientArgs } from "./args/FindFirstClientArgs";
-import { FindManyClientArgs } from "./args/FindManyClientArgs";
-import { FindUniqueClientArgs } from "./args/FindUniqueClientArgs";
-import { GroupByClientArgs } from "./args/GroupByClientArgs";
-import { UpdateClientArgs } from "./args/UpdateClientArgs";
-import { UpdateManyClientArgs } from "./args/UpdateManyClientArgs";
-import { UpsertClientArgs } from "./args/UpsertClientArgs";
+import { AggregateClientArgs } from "./args/AggregateClientArgs.arg";
+import { CreateClientArgs } from "./args/CreateClientArgs.arg";
+import { CreateManyClientArgs } from "./args/CreateManyClientArgs.arg";
+import { DeleteClientArgs } from "./args/DeleteClientArgs.arg";
+import { DeleteManyClientArgs } from "./args/DeleteManyClientArgs.arg";
+import { FindFirstClientArgs } from "./args/FindFirstClientArgs.arg";
+import { FindManyClientArgs } from "./args/FindManyClientArgs.arg";
+import { FindUniqueClientArgs } from "./args/FindUniqueClientArgs.arg";
+import { GroupByClientArgs } from "./args/GroupByClientArgs.arg";
+import { UpdateClientArgs } from "./args/UpdateClientArgs.arg";
+import { UpdateManyClientArgs } from "./args/UpdateManyClientArgs.arg";
+import { UpsertClientArgs } from "./args/UpsertClientArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 import { Client } from "../../../models/Client.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
-import { AggregateClient } from "../../outputs/AggregateClient";
-import { ClientGroupBy } from "../../outputs/ClientGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
+import { AggregateClient } from "../../outputs/AggregateClient.output";
+import { ClientGroupBy } from "../../outputs/ClientGroupBy.output";
 
 @TypeGraphQL.Resolver(_of => Client)
 export class ClientCrudResolver {

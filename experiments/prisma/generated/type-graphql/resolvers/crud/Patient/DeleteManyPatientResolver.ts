@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { DeleteManyPatientArgs } from "./args/DeleteManyPatientArgs";
+import { DeleteManyPatientArgs } from "./args/DeleteManyPatientArgs.arg";
 import { Patient } from "../../../models/Patient.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Patient)

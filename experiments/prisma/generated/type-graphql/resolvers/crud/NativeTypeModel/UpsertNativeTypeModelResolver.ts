@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { UpsertNativeTypeModelArgs } from "./args/UpsertNativeTypeModelArgs";
+import { UpsertNativeTypeModelArgs } from "./args/UpsertNativeTypeModelArgs.arg";
 import { NativeTypeModel } from "../../../models/NativeTypeModel.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

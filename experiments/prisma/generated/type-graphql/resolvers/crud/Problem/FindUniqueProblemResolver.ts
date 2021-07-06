@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { FindUniqueProblemArgs } from "./args/FindUniqueProblemArgs";
+import { FindUniqueProblemArgs } from "./args/FindUniqueProblemArgs.arg";
 import { Problem } from "../../../models/Problem.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

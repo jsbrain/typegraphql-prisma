@@ -1,23 +1,23 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateDirectorArgs } from "./args/AggregateDirectorArgs";
-import { CreateDirectorArgs } from "./args/CreateDirectorArgs";
-import { CreateManyDirectorArgs } from "./args/CreateManyDirectorArgs";
-import { DeleteDirectorArgs } from "./args/DeleteDirectorArgs";
-import { DeleteManyDirectorArgs } from "./args/DeleteManyDirectorArgs";
-import { FindFirstDirectorArgs } from "./args/FindFirstDirectorArgs";
-import { FindManyDirectorArgs } from "./args/FindManyDirectorArgs";
-import { FindUniqueDirectorArgs } from "./args/FindUniqueDirectorArgs";
-import { GroupByDirectorArgs } from "./args/GroupByDirectorArgs";
-import { UpdateDirectorArgs } from "./args/UpdateDirectorArgs";
-import { UpdateManyDirectorArgs } from "./args/UpdateManyDirectorArgs";
-import { UpsertDirectorArgs } from "./args/UpsertDirectorArgs";
+import { AggregateDirectorArgs } from "./args/AggregateDirectorArgs.arg";
+import { CreateDirectorArgs } from "./args/CreateDirectorArgs.arg";
+import { CreateManyDirectorArgs } from "./args/CreateManyDirectorArgs.arg";
+import { DeleteDirectorArgs } from "./args/DeleteDirectorArgs.arg";
+import { DeleteManyDirectorArgs } from "./args/DeleteManyDirectorArgs.arg";
+import { FindFirstDirectorArgs } from "./args/FindFirstDirectorArgs.arg";
+import { FindManyDirectorArgs } from "./args/FindManyDirectorArgs.arg";
+import { FindUniqueDirectorArgs } from "./args/FindUniqueDirectorArgs.arg";
+import { GroupByDirectorArgs } from "./args/GroupByDirectorArgs.arg";
+import { UpdateDirectorArgs } from "./args/UpdateDirectorArgs.arg";
+import { UpdateManyDirectorArgs } from "./args/UpdateManyDirectorArgs.arg";
+import { UpsertDirectorArgs } from "./args/UpsertDirectorArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 import { Director } from "../../../models/Director.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
-import { AggregateDirector } from "../../outputs/AggregateDirector";
-import { DirectorGroupBy } from "../../outputs/DirectorGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
+import { AggregateDirector } from "../../outputs/AggregateDirector.output";
+import { DirectorGroupBy } from "../../outputs/DirectorGroupBy.output";
 
 @TypeGraphQL.Resolver(_of => Director)
 export class DirectorCrudResolver {

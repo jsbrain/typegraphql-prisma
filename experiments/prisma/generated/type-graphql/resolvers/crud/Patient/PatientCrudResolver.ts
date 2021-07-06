@@ -1,23 +1,23 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregatePatientArgs } from "./args/AggregatePatientArgs";
-import { CreateManyPatientArgs } from "./args/CreateManyPatientArgs";
-import { CreatePatientArgs } from "./args/CreatePatientArgs";
-import { DeleteManyPatientArgs } from "./args/DeleteManyPatientArgs";
-import { DeletePatientArgs } from "./args/DeletePatientArgs";
-import { FindFirstPatientArgs } from "./args/FindFirstPatientArgs";
-import { FindManyPatientArgs } from "./args/FindManyPatientArgs";
-import { FindUniquePatientArgs } from "./args/FindUniquePatientArgs";
-import { GroupByPatientArgs } from "./args/GroupByPatientArgs";
-import { UpdateManyPatientArgs } from "./args/UpdateManyPatientArgs";
-import { UpdatePatientArgs } from "./args/UpdatePatientArgs";
-import { UpsertPatientArgs } from "./args/UpsertPatientArgs";
+import { AggregatePatientArgs } from "./args/AggregatePatientArgs.arg";
+import { CreateManyPatientArgs } from "./args/CreateManyPatientArgs.arg";
+import { CreatePatientArgs } from "./args/CreatePatientArgs.arg";
+import { DeleteManyPatientArgs } from "./args/DeleteManyPatientArgs.arg";
+import { DeletePatientArgs } from "./args/DeletePatientArgs.arg";
+import { FindFirstPatientArgs } from "./args/FindFirstPatientArgs.arg";
+import { FindManyPatientArgs } from "./args/FindManyPatientArgs.arg";
+import { FindUniquePatientArgs } from "./args/FindUniquePatientArgs.arg";
+import { GroupByPatientArgs } from "./args/GroupByPatientArgs.arg";
+import { UpdateManyPatientArgs } from "./args/UpdateManyPatientArgs.arg";
+import { UpdatePatientArgs } from "./args/UpdatePatientArgs.arg";
+import { UpsertPatientArgs } from "./args/UpsertPatientArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 import { Patient } from "../../../models/Patient.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
-import { AggregatePatient } from "../../outputs/AggregatePatient";
-import { PatientGroupBy } from "../../outputs/PatientGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
+import { AggregatePatient } from "../../outputs/AggregatePatient.output";
+import { PatientGroupBy } from "../../outputs/PatientGroupBy.output";
 
 @TypeGraphQL.Resolver(_of => Patient)
 export class PatientCrudResolver {

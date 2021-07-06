@@ -123,7 +123,7 @@ exports[`models should properly generate object type class for prisma model with
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../scalars\\";
-import { Sample } from \\"../enums/Sample\\";
+import { Sample } from \\"../enums/Sample.enum\\";
 
 @TypeGraphQL.ObjectType({
   isAbstract: true

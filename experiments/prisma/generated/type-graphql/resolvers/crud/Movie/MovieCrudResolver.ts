@@ -1,23 +1,23 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateMovieArgs } from "./args/AggregateMovieArgs";
-import { CreateManyMovieArgs } from "./args/CreateManyMovieArgs";
-import { CreateMovieArgs } from "./args/CreateMovieArgs";
-import { DeleteManyMovieArgs } from "./args/DeleteManyMovieArgs";
-import { DeleteMovieArgs } from "./args/DeleteMovieArgs";
-import { FindFirstMovieArgs } from "./args/FindFirstMovieArgs";
-import { FindManyMovieArgs } from "./args/FindManyMovieArgs";
-import { FindUniqueMovieArgs } from "./args/FindUniqueMovieArgs";
-import { GroupByMovieArgs } from "./args/GroupByMovieArgs";
-import { UpdateManyMovieArgs } from "./args/UpdateManyMovieArgs";
-import { UpdateMovieArgs } from "./args/UpdateMovieArgs";
-import { UpsertMovieArgs } from "./args/UpsertMovieArgs";
+import { AggregateMovieArgs } from "./args/AggregateMovieArgs.arg";
+import { CreateManyMovieArgs } from "./args/CreateManyMovieArgs.arg";
+import { CreateMovieArgs } from "./args/CreateMovieArgs.arg";
+import { DeleteManyMovieArgs } from "./args/DeleteManyMovieArgs.arg";
+import { DeleteMovieArgs } from "./args/DeleteMovieArgs.arg";
+import { FindFirstMovieArgs } from "./args/FindFirstMovieArgs.arg";
+import { FindManyMovieArgs } from "./args/FindManyMovieArgs.arg";
+import { FindUniqueMovieArgs } from "./args/FindUniqueMovieArgs.arg";
+import { GroupByMovieArgs } from "./args/GroupByMovieArgs.arg";
+import { UpdateManyMovieArgs } from "./args/UpdateManyMovieArgs.arg";
+import { UpdateMovieArgs } from "./args/UpdateMovieArgs.arg";
+import { UpsertMovieArgs } from "./args/UpsertMovieArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 import { Movie } from "../../../models/Movie.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
-import { AggregateMovie } from "../../outputs/AggregateMovie";
-import { MovieGroupBy } from "../../outputs/MovieGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
+import { AggregateMovie } from "../../outputs/AggregateMovie.output";
+import { MovieGroupBy } from "../../outputs/MovieGroupBy.output";
 
 @TypeGraphQL.Resolver(_of => Movie)
 export class MovieCrudResolver {

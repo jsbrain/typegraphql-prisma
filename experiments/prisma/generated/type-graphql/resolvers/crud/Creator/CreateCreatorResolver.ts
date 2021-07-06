@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { CreateCreatorArgs } from "./args/CreateCreatorArgs";
+import { CreateCreatorArgs } from "./args/CreateCreatorArgs.arg";
 import { Creator } from "../../../models/Creator.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

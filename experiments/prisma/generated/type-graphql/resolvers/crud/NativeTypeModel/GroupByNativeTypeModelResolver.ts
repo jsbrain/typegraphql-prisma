@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { GroupByNativeTypeModelArgs } from "./args/GroupByNativeTypeModelArgs";
+import { GroupByNativeTypeModelArgs } from "./args/GroupByNativeTypeModelArgs.arg";
 import { NativeTypeModel } from "../../../models/NativeTypeModel.model";
-import { NativeTypeModelGroupBy } from "../../outputs/NativeTypeModelGroupBy";
+import { NativeTypeModelGroupBy } from "../../outputs/NativeTypeModelGroupBy.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => NativeTypeModel)

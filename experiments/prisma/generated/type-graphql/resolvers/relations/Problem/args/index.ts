@@ -1,1 +1,1 @@
-export { ProblemLikedByArgs } from "./ProblemLikedByArgs";
+export { ProblemLikedByArgs } from "./ProblemLikedByArgs.arg";

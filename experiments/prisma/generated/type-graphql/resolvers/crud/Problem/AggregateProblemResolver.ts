@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateProblemArgs } from "./args/AggregateProblemArgs";
+import { AggregateProblemArgs } from "./args/AggregateProblemArgs.arg";
 import { Problem } from "../../../models/Problem.model";
-import { AggregateProblem } from "../../outputs/AggregateProblem";
+import { AggregateProblem } from "../../outputs/AggregateProblem.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Problem)

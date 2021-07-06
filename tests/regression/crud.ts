@@ -1,5 +1,4 @@
 import { promises as fs } from "fs";
-
 import generateArtifactsDirPath from "../helpers/artifacts-dir";
 import { generateCodeFromSchema } from "../helpers/generate-code";
 import createReadGeneratedFile, {
@@ -109,40 +108,40 @@ describe("crud", () => {
 
     await generateCodeFromSchema(schema, { outputDirPath });
     const aggregateUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/AggregateUserArgs.ts",
+      "/resolvers/crud/User/args/AggregateUserArgs.arg.ts",
     );
     const createUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/CreateUserArgs.ts",
+      "/resolvers/crud/User/args/CreateUserArgs.arg.ts",
     );
     const deleteManyUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/DeleteManyUserArgs.ts",
+      "/resolvers/crud/User/args/DeleteManyUserArgs.arg.ts",
     );
     const deleteUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/DeleteUserArgs.ts",
+      "/resolvers/crud/User/args/DeleteUserArgs.arg.ts",
     );
     const findManyUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/FindManyUserArgs.ts",
+      "/resolvers/crud/User/args/FindManyUserArgs.arg.ts",
     );
     const findFirstUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/FindFirstUserArgs.ts",
+      "/resolvers/crud/User/args/FindFirstUserArgs.arg.ts",
     );
     const findUniqueUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/FindUniqueUserArgs.ts",
+      "/resolvers/crud/User/args/FindUniqueUserArgs.arg.ts",
     );
     const updateManyUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/UpdateManyUserArgs.ts",
+      "/resolvers/crud/User/args/UpdateManyUserArgs.arg.ts",
     );
     const updateUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/UpdateUserArgs.ts",
+      "/resolvers/crud/User/args/UpdateUserArgs.arg.ts",
     );
     const upsertUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/UpsertUserArgs.ts",
+      "/resolvers/crud/User/args/UpsertUserArgs.arg.ts",
     );
     const groupByUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/GroupByUserArgs.ts",
+      "/resolvers/crud/User/args/GroupByUserArgs.arg.ts",
     );
     const createManyUserArgsTSFile = await readGeneratedFile(
-      "/resolvers/crud/User/args/CreateManyUserArgs.ts",
+      "/resolvers/crud/User/args/CreateManyUserArgs.arg.ts",
     );
     const indexTSFile = await readGeneratedFile(
       "/resolvers/crud/User/args/index.ts",
@@ -281,40 +280,40 @@ describe("crud", () => {
 
       await generateCodeFromSchema(schema, { outputDirPath });
       const aggregateClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/AggregateClientArgs.ts",
+        "/resolvers/crud/Client/args/AggregateClientArgs.arg.ts",
       );
       const createClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/CreateClientArgs.ts",
+        "/resolvers/crud/Client/args/CreateClientArgs.arg.ts",
       );
       const deleteManyClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/DeleteManyClientArgs.ts",
+        "/resolvers/crud/Client/args/DeleteManyClientArgs.arg.ts",
       );
       const deleteClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/DeleteClientArgs.ts",
+        "/resolvers/crud/Client/args/DeleteClientArgs.arg.ts",
       );
       const findManyClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/FindManyClientArgs.ts",
+        "/resolvers/crud/Client/args/FindManyClientArgs.arg.ts",
       );
       const findFirstClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/FindFirstClientArgs.ts",
+        "/resolvers/crud/Client/args/FindFirstClientArgs.arg.ts",
       );
       const findUniqueClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/FindUniqueClientArgs.ts",
+        "/resolvers/crud/Client/args/FindUniqueClientArgs.arg.ts",
       );
       const updateManyClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/UpdateManyClientArgs.ts",
+        "/resolvers/crud/Client/args/UpdateManyClientArgs.arg.ts",
       );
       const updateClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/UpdateClientArgs.ts",
+        "/resolvers/crud/Client/args/UpdateClientArgs.arg.ts",
       );
       const upsertClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/UpsertClientArgs.ts",
+        "/resolvers/crud/Client/args/UpsertClientArgs.arg.ts",
       );
       const groupByClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/GroupByClientArgs.ts",
+        "/resolvers/crud/Client/args/GroupByClientArgs.arg.ts",
       );
       const createManyClientArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Client/args/CreateManyClientArgs.ts",
+        "/resolvers/crud/Client/args/CreateManyClientArgs.arg.ts",
       );
       const indexTSFile = await readGeneratedFile(
         "/resolvers/crud/Client/args/index.ts",
@@ -441,16 +440,16 @@ describe("crud", () => {
         useUncheckedScalarInputs: true,
       });
       const createUserArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/User/args/CreateUserArgs.ts",
+        "/resolvers/crud/User/args/CreateUserArgs.arg.ts",
       );
       const updateManyUserArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/User/args/UpdateManyUserArgs.ts",
+        "/resolvers/crud/User/args/UpdateManyUserArgs.arg.ts",
       );
       const updateUserArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/User/args/UpdateUserArgs.ts",
+        "/resolvers/crud/User/args/UpdateUserArgs.arg.ts",
       );
       const upsertUserArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/User/args/UpsertUserArgs.ts",
+        "/resolvers/crud/User/args/UpsertUserArgs.arg.ts",
       );
 
       expect(createUserArgsTSFile).toMatchSnapshot("CreateUserArgs");
@@ -482,13 +481,13 @@ describe("crud", () => {
         previewFeatures: ["orderByRelation"],
       });
       const aggregateFirstModelArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/FirstModel/args/AggregateFirstModelArgs.ts",
+        "/resolvers/crud/FirstModel/args/AggregateFirstModelArgs.arg.ts",
       );
       const findFirstFirstModelArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/FirstModel/args/FindFirstFirstModelArgs.ts",
+        "/resolvers/crud/FirstModel/args/FindFirstFirstModelArgs.arg.ts",
       );
       const findManyFirstModelArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/FirstModel/args/FindManyFirstModelArgs.ts",
+        "/resolvers/crud/FirstModel/args/FindManyFirstModelArgs.arg.ts",
       );
       const indexTSFile = await readGeneratedFile(
         "/resolvers/crud/FirstModel/args/index.ts",
@@ -528,13 +527,13 @@ describe("crud", () => {
         previewFeatures: ["orderByRelation"],
       });
       const aggregateSecondModelArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/SecondModel/args/AggregateSecondModelArgs.ts",
+        "/resolvers/crud/SecondModel/args/AggregateSecondModelArgs.arg.ts",
       );
       const findFirstSecondModelArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/SecondModel/args/FindFirstSecondModelArgs.ts",
+        "/resolvers/crud/SecondModel/args/FindFirstSecondModelArgs.arg.ts",
       );
       const findManySecondModelArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/SecondModel/args/FindManySecondModelArgs.ts",
+        "/resolvers/crud/SecondModel/args/FindManySecondModelArgs.arg.ts",
       );
       const indexTSFile = await readGeneratedFile(
         "/resolvers/crud/SecondModel/args/index.ts",
@@ -595,7 +594,7 @@ describe("crud", () => {
         previewFeatures: ["orderByAggregateGroup"],
       });
       const groupBySampleArgsTSFile = await readGeneratedFile(
-        "/resolvers/crud/Sample/args/GroupBySampleArgs.ts",
+        "/resolvers/crud/Sample/args/GroupBySampleArgs.arg.ts",
       );
 
       expect(groupBySampleArgsTSFile).toMatchSnapshot("GroupBySampleArgs");

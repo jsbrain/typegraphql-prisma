@@ -1,23 +1,23 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateCreatorArgs } from "./args/AggregateCreatorArgs";
-import { CreateCreatorArgs } from "./args/CreateCreatorArgs";
-import { CreateManyCreatorArgs } from "./args/CreateManyCreatorArgs";
-import { DeleteCreatorArgs } from "./args/DeleteCreatorArgs";
-import { DeleteManyCreatorArgs } from "./args/DeleteManyCreatorArgs";
-import { FindFirstCreatorArgs } from "./args/FindFirstCreatorArgs";
-import { FindManyCreatorArgs } from "./args/FindManyCreatorArgs";
-import { FindUniqueCreatorArgs } from "./args/FindUniqueCreatorArgs";
-import { GroupByCreatorArgs } from "./args/GroupByCreatorArgs";
-import { UpdateCreatorArgs } from "./args/UpdateCreatorArgs";
-import { UpdateManyCreatorArgs } from "./args/UpdateManyCreatorArgs";
-import { UpsertCreatorArgs } from "./args/UpsertCreatorArgs";
+import { AggregateCreatorArgs } from "./args/AggregateCreatorArgs.arg";
+import { CreateCreatorArgs } from "./args/CreateCreatorArgs.arg";
+import { CreateManyCreatorArgs } from "./args/CreateManyCreatorArgs.arg";
+import { DeleteCreatorArgs } from "./args/DeleteCreatorArgs.arg";
+import { DeleteManyCreatorArgs } from "./args/DeleteManyCreatorArgs.arg";
+import { FindFirstCreatorArgs } from "./args/FindFirstCreatorArgs.arg";
+import { FindManyCreatorArgs } from "./args/FindManyCreatorArgs.arg";
+import { FindUniqueCreatorArgs } from "./args/FindUniqueCreatorArgs.arg";
+import { GroupByCreatorArgs } from "./args/GroupByCreatorArgs.arg";
+import { UpdateCreatorArgs } from "./args/UpdateCreatorArgs.arg";
+import { UpdateManyCreatorArgs } from "./args/UpdateManyCreatorArgs.arg";
+import { UpsertCreatorArgs } from "./args/UpsertCreatorArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 import { Creator } from "../../../models/Creator.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
-import { AggregateCreator } from "../../outputs/AggregateCreator";
-import { CreatorGroupBy } from "../../outputs/CreatorGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
+import { AggregateCreator } from "../../outputs/AggregateCreator.output";
+import { CreatorGroupBy } from "../../outputs/CreatorGroupBy.output";
 
 @TypeGraphQL.Resolver(_of => Creator)
 export class CreatorCrudResolver {

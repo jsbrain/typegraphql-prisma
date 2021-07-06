@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { DeleteNativeTypeModelArgs } from "./args/DeleteNativeTypeModelArgs";
+import { DeleteNativeTypeModelArgs } from "./args/DeleteNativeTypeModelArgs.arg";
 import { NativeTypeModel } from "../../../models/NativeTypeModel.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

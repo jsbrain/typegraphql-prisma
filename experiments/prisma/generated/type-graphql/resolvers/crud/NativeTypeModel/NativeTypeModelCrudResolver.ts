@@ -1,23 +1,23 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateNativeTypeModelArgs } from "./args/AggregateNativeTypeModelArgs";
-import { CreateManyNativeTypeModelArgs } from "./args/CreateManyNativeTypeModelArgs";
-import { CreateNativeTypeModelArgs } from "./args/CreateNativeTypeModelArgs";
-import { DeleteManyNativeTypeModelArgs } from "./args/DeleteManyNativeTypeModelArgs";
-import { DeleteNativeTypeModelArgs } from "./args/DeleteNativeTypeModelArgs";
-import { FindFirstNativeTypeModelArgs } from "./args/FindFirstNativeTypeModelArgs";
-import { FindManyNativeTypeModelArgs } from "./args/FindManyNativeTypeModelArgs";
-import { FindUniqueNativeTypeModelArgs } from "./args/FindUniqueNativeTypeModelArgs";
-import { GroupByNativeTypeModelArgs } from "./args/GroupByNativeTypeModelArgs";
-import { UpdateManyNativeTypeModelArgs } from "./args/UpdateManyNativeTypeModelArgs";
-import { UpdateNativeTypeModelArgs } from "./args/UpdateNativeTypeModelArgs";
-import { UpsertNativeTypeModelArgs } from "./args/UpsertNativeTypeModelArgs";
+import { AggregateNativeTypeModelArgs } from "./args/AggregateNativeTypeModelArgs.arg";
+import { CreateManyNativeTypeModelArgs } from "./args/CreateManyNativeTypeModelArgs.arg";
+import { CreateNativeTypeModelArgs } from "./args/CreateNativeTypeModelArgs.arg";
+import { DeleteManyNativeTypeModelArgs } from "./args/DeleteManyNativeTypeModelArgs.arg";
+import { DeleteNativeTypeModelArgs } from "./args/DeleteNativeTypeModelArgs.arg";
+import { FindFirstNativeTypeModelArgs } from "./args/FindFirstNativeTypeModelArgs.arg";
+import { FindManyNativeTypeModelArgs } from "./args/FindManyNativeTypeModelArgs.arg";
+import { FindUniqueNativeTypeModelArgs } from "./args/FindUniqueNativeTypeModelArgs.arg";
+import { GroupByNativeTypeModelArgs } from "./args/GroupByNativeTypeModelArgs.arg";
+import { UpdateManyNativeTypeModelArgs } from "./args/UpdateManyNativeTypeModelArgs.arg";
+import { UpdateNativeTypeModelArgs } from "./args/UpdateNativeTypeModelArgs.arg";
+import { UpsertNativeTypeModelArgs } from "./args/UpsertNativeTypeModelArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 import { NativeTypeModel } from "../../../models/NativeTypeModel.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
-import { AggregateNativeTypeModel } from "../../outputs/AggregateNativeTypeModel";
-import { NativeTypeModelGroupBy } from "../../outputs/NativeTypeModelGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
+import { AggregateNativeTypeModel } from "../../outputs/AggregateNativeTypeModel.output";
+import { NativeTypeModelGroupBy } from "../../outputs/NativeTypeModelGroupBy.output";
 
 @TypeGraphQL.Resolver(_of => NativeTypeModel)
 export class NativeTypeModelCrudResolver {

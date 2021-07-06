@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import { Director } from "../../../models/Director.model";
 import { Movie } from "../../../models/Movie.model";
-import { DirectorMoviesArgs } from "./args/DirectorMoviesArgs";
+import { DirectorMoviesArgs } from "./args/DirectorMoviesArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Director)

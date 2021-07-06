@@ -5,11 +5,11 @@ exports[`outputs should properly generate aggregate classes for model with lower
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
-import { ExampleAvgAggregate } from \\"../outputs/ExampleAvgAggregate\\";
-import { ExampleCountAggregate } from \\"../outputs/ExampleCountAggregate\\";
-import { ExampleMaxAggregate } from \\"../outputs/ExampleMaxAggregate\\";
-import { ExampleMinAggregate } from \\"../outputs/ExampleMinAggregate\\";
-import { ExampleSumAggregate } from \\"../outputs/ExampleSumAggregate\\";
+import { ExampleAvgAggregate } from \\"../outputs/ExampleAvgAggregate.output\\";
+import { ExampleCountAggregate } from \\"../outputs/ExampleCountAggregate.output\\";
+import { ExampleMaxAggregate } from \\"../outputs/ExampleMaxAggregate.output\\";
+import { ExampleMinAggregate } from \\"../outputs/ExampleMinAggregate.output\\";
+import { ExampleSumAggregate } from \\"../outputs/ExampleSumAggregate.output\\";
 
 @TypeGraphQL.ObjectType({
   isAbstract: true
@@ -209,14 +209,14 @@ export class ExampleSumAggregate {
 `;
 
 exports[`outputs should properly generate aggregate classes for model with lowercase name: outputs index 1`] = `
-"export { AffectedRowsOutput } from \\"./AffectedRowsOutput\\";
-export { AggregateExample } from \\"./AggregateExample\\";
-export { ExampleAvgAggregate } from \\"./ExampleAvgAggregate\\";
-export { ExampleCountAggregate } from \\"./ExampleCountAggregate\\";
-export { ExampleGroupBy } from \\"./ExampleGroupBy\\";
-export { ExampleMaxAggregate } from \\"./ExampleMaxAggregate\\";
-export { ExampleMinAggregate } from \\"./ExampleMinAggregate\\";
-export { ExampleSumAggregate } from \\"./ExampleSumAggregate\\";
+"export { AffectedRowsOutput } from \\"./AffectedRowsOutput.output\\";
+export { AggregateExample } from \\"./AggregateExample.output\\";
+export { ExampleAvgAggregate } from \\"./ExampleAvgAggregate.output\\";
+export { ExampleCountAggregate } from \\"./ExampleCountAggregate.output\\";
+export { ExampleGroupBy } from \\"./ExampleGroupBy.output\\";
+export { ExampleMaxAggregate } from \\"./ExampleMaxAggregate.output\\";
+export { ExampleMinAggregate } from \\"./ExampleMinAggregate.output\\";
+export { ExampleSumAggregate } from \\"./ExampleSumAggregate.output\\";
 "
 `;
 
@@ -225,11 +225,11 @@ exports[`outputs should properly generate aggregate classes for renamed model: A
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
-import { ExampleAvgAggregate } from \\"../outputs/ExampleAvgAggregate\\";
-import { ExampleCountAggregate } from \\"../outputs/ExampleCountAggregate\\";
-import { ExampleMaxAggregate } from \\"../outputs/ExampleMaxAggregate\\";
-import { ExampleMinAggregate } from \\"../outputs/ExampleMinAggregate\\";
-import { ExampleSumAggregate } from \\"../outputs/ExampleSumAggregate\\";
+import { ExampleAvgAggregate } from \\"../outputs/ExampleAvgAggregate.output\\";
+import { ExampleCountAggregate } from \\"../outputs/ExampleCountAggregate.output\\";
+import { ExampleMaxAggregate } from \\"../outputs/ExampleMaxAggregate.output\\";
+import { ExampleMinAggregate } from \\"../outputs/ExampleMinAggregate.output\\";
+import { ExampleSumAggregate } from \\"../outputs/ExampleSumAggregate.output\\";
 
 @TypeGraphQL.ObjectType({
   isAbstract: true
@@ -429,14 +429,14 @@ export class ExampleSumAggregate {
 `;
 
 exports[`outputs should properly generate aggregate classes for renamed model: outputs index 1`] = `
-"export { AffectedRowsOutput } from \\"./AffectedRowsOutput\\";
-export { AggregateExample } from \\"./AggregateExample\\";
-export { ExampleAvgAggregate } from \\"./ExampleAvgAggregate\\";
-export { ExampleCountAggregate } from \\"./ExampleCountAggregate\\";
-export { ExampleGroupBy } from \\"./ExampleGroupBy\\";
-export { ExampleMaxAggregate } from \\"./ExampleMaxAggregate\\";
-export { ExampleMinAggregate } from \\"./ExampleMinAggregate\\";
-export { ExampleSumAggregate } from \\"./ExampleSumAggregate\\";
+"export { AffectedRowsOutput } from \\"./AffectedRowsOutput.output\\";
+export { AggregateExample } from \\"./AggregateExample.output\\";
+export { ExampleAvgAggregate } from \\"./ExampleAvgAggregate.output\\";
+export { ExampleCountAggregate } from \\"./ExampleCountAggregate.output\\";
+export { ExampleGroupBy } from \\"./ExampleGroupBy.output\\";
+export { ExampleMaxAggregate } from \\"./ExampleMaxAggregate.output\\";
+export { ExampleMinAggregate } from \\"./ExampleMinAggregate.output\\";
+export { ExampleSumAggregate } from \\"./ExampleSumAggregate.output\\";
 "
 `;
 
@@ -463,11 +463,11 @@ exports[`outputs should properly generate output type classes: AggregateSample 1
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
-import { SampleAvgAggregate } from \\"../outputs/SampleAvgAggregate\\";
-import { SampleCountAggregate } from \\"../outputs/SampleCountAggregate\\";
-import { SampleMaxAggregate } from \\"../outputs/SampleMaxAggregate\\";
-import { SampleMinAggregate } from \\"../outputs/SampleMinAggregate\\";
-import { SampleSumAggregate } from \\"../outputs/SampleSumAggregate\\";
+import { SampleAvgAggregate } from \\"../outputs/SampleAvgAggregate.output\\";
+import { SampleCountAggregate } from \\"../outputs/SampleCountAggregate.output\\";
+import { SampleMaxAggregate } from \\"../outputs/SampleMaxAggregate.output\\";
+import { SampleMinAggregate } from \\"../outputs/SampleMinAggregate.output\\";
+import { SampleSumAggregate } from \\"../outputs/SampleSumAggregate.output\\";
 
 @TypeGraphQL.ObjectType({
   isAbstract: true
@@ -582,11 +582,11 @@ exports[`outputs should properly generate output type classes: SampleGroupBy 1`]
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
-import { SampleAvgAggregate } from \\"../outputs/SampleAvgAggregate\\";
-import { SampleCountAggregate } from \\"../outputs/SampleCountAggregate\\";
-import { SampleMaxAggregate } from \\"../outputs/SampleMaxAggregate\\";
-import { SampleMinAggregate } from \\"../outputs/SampleMinAggregate\\";
-import { SampleSumAggregate } from \\"../outputs/SampleSumAggregate\\";
+import { SampleAvgAggregate } from \\"../outputs/SampleAvgAggregate.output\\";
+import { SampleCountAggregate } from \\"../outputs/SampleCountAggregate.output\\";
+import { SampleMaxAggregate } from \\"../outputs/SampleMaxAggregate.output\\";
+import { SampleMinAggregate } from \\"../outputs/SampleMinAggregate.output\\";
+import { SampleSumAggregate } from \\"../outputs/SampleSumAggregate.output\\";
 
 @TypeGraphQL.ObjectType({
   isAbstract: true
@@ -755,14 +755,14 @@ export class SampleSumAggregate {
 `;
 
 exports[`outputs should properly generate output type classes: outputs index 1`] = `
-"export { AffectedRowsOutput } from \\"./AffectedRowsOutput\\";
-export { AggregateSample } from \\"./AggregateSample\\";
-export { SampleAvgAggregate } from \\"./SampleAvgAggregate\\";
-export { SampleCountAggregate } from \\"./SampleCountAggregate\\";
-export { SampleGroupBy } from \\"./SampleGroupBy\\";
-export { SampleMaxAggregate } from \\"./SampleMaxAggregate\\";
-export { SampleMinAggregate } from \\"./SampleMinAggregate\\";
-export { SampleSumAggregate } from \\"./SampleSumAggregate\\";
+"export { AffectedRowsOutput } from \\"./AffectedRowsOutput.output\\";
+export { AggregateSample } from \\"./AggregateSample.output\\";
+export { SampleAvgAggregate } from \\"./SampleAvgAggregate.output\\";
+export { SampleCountAggregate } from \\"./SampleCountAggregate.output\\";
+export { SampleGroupBy } from \\"./SampleGroupBy.output\\";
+export { SampleMaxAggregate } from \\"./SampleMaxAggregate.output\\";
+export { SampleMinAggregate } from \\"./SampleMinAggregate.output\\";
+export { SampleSumAggregate } from \\"./SampleSumAggregate.output\\";
 "
 `;
 
@@ -785,22 +785,22 @@ export class FirstModelCount {
 `;
 
 exports[`outputs when selectRelationCount preview feature is enabled should properly generate count classes for relation fields: outputs index 1`] = `
-"export { AffectedRowsOutput } from \\"./AffectedRowsOutput\\";
-export { AggregateFirstModel } from \\"./AggregateFirstModel\\";
-export { AggregateSecondModel } from \\"./AggregateSecondModel\\";
-export { FirstModelAvgAggregate } from \\"./FirstModelAvgAggregate\\";
-export { FirstModelCount } from \\"./FirstModelCount\\";
-export { FirstModelCountAggregate } from \\"./FirstModelCountAggregate\\";
-export { FirstModelGroupBy } from \\"./FirstModelGroupBy\\";
-export { FirstModelMaxAggregate } from \\"./FirstModelMaxAggregate\\";
-export { FirstModelMinAggregate } from \\"./FirstModelMinAggregate\\";
-export { FirstModelSumAggregate } from \\"./FirstModelSumAggregate\\";
-export { SecondModelAvgAggregate } from \\"./SecondModelAvgAggregate\\";
-export { SecondModelCountAggregate } from \\"./SecondModelCountAggregate\\";
-export { SecondModelGroupBy } from \\"./SecondModelGroupBy\\";
-export { SecondModelMaxAggregate } from \\"./SecondModelMaxAggregate\\";
-export { SecondModelMinAggregate } from \\"./SecondModelMinAggregate\\";
-export { SecondModelSumAggregate } from \\"./SecondModelSumAggregate\\";
+"export { AffectedRowsOutput } from \\"./AffectedRowsOutput.output\\";
+export { AggregateFirstModel } from \\"./AggregateFirstModel.output\\";
+export { AggregateSecondModel } from \\"./AggregateSecondModel.output\\";
+export { FirstModelAvgAggregate } from \\"./FirstModelAvgAggregate.output\\";
+export { FirstModelCount } from \\"./FirstModelCount.output\\";
+export { FirstModelCountAggregate } from \\"./FirstModelCountAggregate.output\\";
+export { FirstModelGroupBy } from \\"./FirstModelGroupBy.output\\";
+export { FirstModelMaxAggregate } from \\"./FirstModelMaxAggregate.output\\";
+export { FirstModelMinAggregate } from \\"./FirstModelMinAggregate.output\\";
+export { FirstModelSumAggregate } from \\"./FirstModelSumAggregate.output\\";
+export { SecondModelAvgAggregate } from \\"./SecondModelAvgAggregate.output\\";
+export { SecondModelCountAggregate } from \\"./SecondModelCountAggregate.output\\";
+export { SecondModelGroupBy } from \\"./SecondModelGroupBy.output\\";
+export { SecondModelMaxAggregate } from \\"./SecondModelMaxAggregate.output\\";
+export { SecondModelMinAggregate } from \\"./SecondModelMinAggregate.output\\";
+export { SecondModelSumAggregate } from \\"./SecondModelSumAggregate.output\\";
 "
 `;
 
@@ -828,11 +828,11 @@ exports[`outputs when simpleResolvers option is enabled should properly generate
 import * as GraphQLScalars from \\"graphql-scalars\\";
 import { Prisma } from \\"../../../../helpers/prisma-client-mock\\";
 import { DecimalJSScalar } from \\"../../scalars\\";
-import { SampleAvgAggregate } from \\"../outputs/SampleAvgAggregate\\";
-import { SampleCountAggregate } from \\"../outputs/SampleCountAggregate\\";
-import { SampleMaxAggregate } from \\"../outputs/SampleMaxAggregate\\";
-import { SampleMinAggregate } from \\"../outputs/SampleMinAggregate\\";
-import { SampleSumAggregate } from \\"../outputs/SampleSumAggregate\\";
+import { SampleAvgAggregate } from \\"../outputs/SampleAvgAggregate.output\\";
+import { SampleCountAggregate } from \\"../outputs/SampleCountAggregate.output\\";
+import { SampleMaxAggregate } from \\"../outputs/SampleMaxAggregate.output\\";
+import { SampleMinAggregate } from \\"../outputs/SampleMinAggregate.output\\";
+import { SampleSumAggregate } from \\"../outputs/SampleSumAggregate.output\\";
 
 @TypeGraphQL.ObjectType({
   isAbstract: true,

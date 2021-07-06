@@ -1,11 +1,11 @@
-import * as TypeGraphQL from "type-graphql";
 import * as GraphQLScalars from "graphql-scalars";
+import * as TypeGraphQL from "type-graphql";
 import { Prisma } from "../../../client";
 import { DecimalJSScalar } from "../../scalars";
-import { NestedBigIntNullableFilter } from "../inputs/NestedBigIntNullableFilter";
-import { NestedBigIntNullableWithAggregatesFilter } from "../inputs/NestedBigIntNullableWithAggregatesFilter";
-import { NestedFloatNullableFilter } from "../inputs/NestedFloatNullableFilter";
-import { NestedIntNullableFilter } from "../inputs/NestedIntNullableFilter";
+import { NestedBigIntNullableFilter } from "../inputs/NestedBigIntNullableFilter.input";
+import { NestedBigIntNullableWithAggregatesFilter } from "../inputs/NestedBigIntNullableWithAggregatesFilter.input";
+import { NestedFloatNullableFilter } from "../inputs/NestedFloatNullableFilter.input";
+import { NestedIntNullableFilter } from "../inputs/NestedIntNullableFilter.input";
 
 @TypeGraphQL.InputType({
   isAbstract: true

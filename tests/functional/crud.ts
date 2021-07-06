@@ -1,8 +1,7 @@
-import "reflect-metadata";
 import { promises as fs } from "fs";
-import { buildSchema } from "type-graphql";
 import { graphql, GraphQLSchema } from "graphql";
-
+import "reflect-metadata";
+import { buildSchema } from "type-graphql";
 import generateArtifactsDirPath from "../helpers/artifacts-dir";
 import { generateCodeFromSchema } from "../helpers/generate-code";
 

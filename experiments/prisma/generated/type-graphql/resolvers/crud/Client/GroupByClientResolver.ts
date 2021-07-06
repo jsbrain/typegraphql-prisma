@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { GroupByClientArgs } from "./args/GroupByClientArgs";
+import { GroupByClientArgs } from "./args/GroupByClientArgs.arg";
 import { Client } from "../../../models/Client.model";
-import { ClientGroupBy } from "../../outputs/ClientGroupBy";
+import { ClientGroupBy } from "../../outputs/ClientGroupBy.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Client)

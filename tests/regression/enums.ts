@@ -1,5 +1,4 @@
 import { promises as fs } from "fs";
-
 import generateArtifactsDirPath from "../helpers/artifacts-dir";
 import { generateCodeFromSchema } from "../helpers/generate-code";
 import createReadGeneratedFile, {
@@ -26,7 +25,7 @@ describe("enums", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const colorEnumTSFile = await readGeneratedFile("/enums/Color.ts");
+    const colorEnumTSFile = await readGeneratedFile("/enums/Color.enum.ts");
 
     expect(colorEnumTSFile).toMatchSnapshot();
   });
@@ -42,7 +41,7 @@ describe("enums", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const roleEnumTSFile = await readGeneratedFile("/enums/Role.ts");
+    const roleEnumTSFile = await readGeneratedFile("/enums/Role.enum.ts");
     const enumsIndexTSFile = await readGeneratedFile("/enums/index.ts");
 
     expect(roleEnumTSFile).toMatchSnapshot();
@@ -69,8 +68,8 @@ describe("enums", () => {
     `;
 
     await generateCodeFromSchema(schema, { outputDirPath });
-    const sortOrderTSFile = await readGeneratedFile("/enums/SortOrder.ts");
-    const queryModeTSFile = await readGeneratedFile("/enums/QueryMode.ts");
+    const sortOrderTSFile = await readGeneratedFile("/enums/SortOrder.enum.ts");
+    const queryModeTSFile = await readGeneratedFile("/enums/QueryMode.enum.ts");
     const enumsIndexTSFile = await readGeneratedFile("/enums/index.ts");
 
     expect(sortOrderTSFile).toMatchSnapshot("SortOrder");
@@ -89,7 +88,7 @@ describe("enums", () => {
 
     await generateCodeFromSchema(schema, { outputDirPath });
     const sampleModelScalarFieldEnumTSFile = await readGeneratedFile(
-      "/enums/SampleModelScalarFieldEnum.ts",
+      "/enums/SampleModelScalarFieldEnum.enum.ts",
     );
     const enumsIndexTSFile = await readGeneratedFile("/enums/index.ts");
 
@@ -111,7 +110,7 @@ describe("enums", () => {
 
     await generateCodeFromSchema(schema, { outputDirPath });
     const exampleModelScalarFieldEnumTSFile = await readGeneratedFile(
-      "/enums/ExampleModelScalarFieldEnum.ts",
+      "/enums/ExampleModelScalarFieldEnum.enum.ts",
     );
     const enumsIndexTSFile = await readGeneratedFile("/enums/index.ts");
 
@@ -133,7 +132,7 @@ describe("enums", () => {
 
     await generateCodeFromSchema(schema, { outputDirPath });
     const sampleModelScalarFieldEnumTSFile = await readGeneratedFile(
-      "/enums/SampleModelScalarFieldEnum.ts",
+      "/enums/SampleModelScalarFieldEnum.enum.ts",
     );
     const enumsIndexTSFile = await readGeneratedFile("/enums/index.ts");
 

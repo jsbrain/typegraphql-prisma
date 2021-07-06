@@ -1,1 +1,1 @@
-export { DirectorMoviesArgs } from "./DirectorMoviesArgs";
+export { DirectorMoviesArgs } from "./DirectorMoviesArgs.arg";

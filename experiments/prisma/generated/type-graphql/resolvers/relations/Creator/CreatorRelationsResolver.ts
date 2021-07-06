@@ -1,8 +1,8 @@
 import * as TypeGraphQL from "type-graphql";
 import { Creator } from "../../../models/Creator.model";
 import { Problem } from "../../../models/Problem.model";
-import { CreatorLikesArgs } from "./args/CreatorLikesArgs";
-import { CreatorProblemsArgs } from "./args/CreatorProblemsArgs";
+import { CreatorLikesArgs } from "./args/CreatorLikesArgs.arg";
+import { CreatorProblemsArgs } from "./args/CreatorProblemsArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Creator)

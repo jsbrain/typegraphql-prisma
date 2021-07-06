@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateCategoryArgs } from "./args/AggregateCategoryArgs";
+import { AggregateCategoryArgs } from "./args/AggregateCategoryArgs.arg";
 import { Category } from "../../../models/Category.model";
-import { AggregateCategory } from "../../outputs/AggregateCategory";
+import { AggregateCategory } from "../../outputs/AggregateCategory.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Category)

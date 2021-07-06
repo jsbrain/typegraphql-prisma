@@ -1,47 +1,46 @@
 import { DMMF as PrismaDMMF } from "@prisma/client/runtime";
-import { Project, ScriptTarget, ModuleKind, CompilerOptions } from "ts-morph";
 import path from "path";
-
-import { noop } from "./helpers";
-import generateEnumFromDef from "./enum";
-import generateObjectTypeClassFromModel from "./model-type-class";
-import generateRelationsResolverClassesFromModel from "./resolvers/relations";
+import { CompilerOptions, ModuleKind, Project, ScriptTarget } from "ts-morph";
+import { ensureInstalledCorrectPrismaPackage } from "../utils/prisma-version";
+import generateArgsTypeClassFromArgs from "./args-class";
 import {
-  generateOutputTypeClassFromType,
-  generateInputTypeClassFromType,
-} from "./type-class";
-import generateCrudResolverClassFromMapping from "./resolvers/full-crud";
-import {
-  resolversFolderName,
-  relationsResolversFolderName,
-  crudResolversFolderName,
-  inputsFolderName,
-  outputsFolderName,
-  enumsFolderName,
-  modelsFolderName,
   argsFolderName,
+  crudResolversFolderName,
+  enumsFolderName,
+  inputsFolderName,
+  modelsFolderName,
+  outputsFolderName,
+  relationsResolversFolderName,
+  resolversFolderName,
 } from "./config";
+import { DmmfDocument } from "./dmmf/dmmf-document";
+import generateEnumFromDef from "./enum";
+import { generateEnhanceMap } from "./generate-enhance";
+import { generateHelpersFile } from "./generate-helpers";
+import { generateCustomScalars } from "./generate-scalars";
+import { noop } from "./helpers";
 import {
-  generateResolversBarrelFile,
-  generateInputsBarrelFile,
-  generateOutputsBarrelFile,
-  generateIndexFile,
-  generateModelsBarrelFile,
-  generateEnumsBarrelFile,
   generateArgsBarrelFile,
   generateArgsIndexFile,
-  generateResolversIndexFile,
+  generateEnumsBarrelFile,
+  generateIndexFile,
+  generateInputsBarrelFile,
+  generateModelsBarrelFile,
+  generateOutputsBarrelFile,
   generateResolversActionsBarrelFile,
+  generateResolversBarrelFile,
+  generateResolversIndexFile,
 } from "./imports";
+import generateObjectTypeClassFromModel from "./model-type-class";
 import { GenerateCodeOptions } from "./options";
-import { DmmfDocument } from "./dmmf/dmmf-document";
-import generateArgsTypeClassFromArgs from "./args-class";
+import generateCrudResolverClassFromMapping from "./resolvers/full-crud";
+import generateRelationsResolverClassesFromModel from "./resolvers/relations";
 import generateActionResolverClass from "./resolvers/separate-action";
-import { ensureInstalledCorrectPrismaPackage } from "../utils/prisma-version";
+import {
+  generateInputTypeClassFromType,
+  generateOutputTypeClassFromType,
+} from "./type-class";
 import { GenerateMappingData } from "./types";
-import { generateEnhanceMap } from "./generate-enhance";
-import { generateCustomScalars } from "./generate-scalars";
-import { generateHelpersFile } from "./generate-helpers";
 
 const baseCompilerOptions: CompilerOptions = {
   target: ScriptTarget.ES2019,
@@ -341,8 +340,8 @@ export default async function generateCode(
       );
     });
   });
-  const generateMappingData = dmmfDocument.modelMappings.map<GenerateMappingData>(
-    mapping => {
+  const generateMappingData =
+    dmmfDocument.modelMappings.map<GenerateMappingData>(mapping => {
       const model = dmmfDocument.datamodel.models.find(
         model => model.name === mapping.model,
       )!;
@@ -351,8 +350,7 @@ export default async function generateCode(
         resolverName: mapping.resolverName,
         actionResolverNames: mapping.actions.map(it => it.actionResolverName),
       };
-    },
-  );
+    });
   const crudResolversBarrelExportSourceFile = project.createSourceFile(
     path.resolve(
       baseDirPath,

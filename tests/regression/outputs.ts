@@ -1,5 +1,4 @@
 import { promises as fs } from "fs";
-
 import generateArtifactsDirPath from "../helpers/artifacts-dir";
 import { generateCodeFromSchema } from "../helpers/generate-code";
 import createReadGeneratedFile, {
@@ -30,28 +29,28 @@ describe("outputs", () => {
 
     await generateCodeFromSchema(schema, { outputDirPath });
     const aggregateSampleTSFile = await readGeneratedFile(
-      "/resolvers/outputs/AggregateSample.ts",
+      "/resolvers/outputs/AggregateSample.output.ts",
     );
     const countAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/SampleCountAggregate.ts",
+      "/resolvers/outputs/SampleCountAggregate.output.ts",
     );
     const avgAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/SampleAvgAggregate.ts",
+      "/resolvers/outputs/SampleAvgAggregate.output.ts",
     );
     const sumAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/SampleSumAggregate.ts",
+      "/resolvers/outputs/SampleSumAggregate.output.ts",
     );
     const minAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/SampleMinAggregate.ts",
+      "/resolvers/outputs/SampleMinAggregate.output.ts",
     );
     const maxAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/SampleMaxAggregate.ts",
+      "/resolvers/outputs/SampleMaxAggregate.output.ts",
     );
     const affectedRowsOutputTSFile = await readGeneratedFile(
-      "/resolvers/outputs/AffectedRowsOutput.ts",
+      "/resolvers/outputs/AffectedRowsOutput.output.ts",
     );
     const sampleGroupByTSFile = await readGeneratedFile(
-      "/resolvers/outputs/SampleGroupBy.ts",
+      "/resolvers/outputs/SampleGroupBy.output.ts",
     );
     const outputsIndexTSFile = await readGeneratedFile(
       "/resolvers/outputs/index.ts",
@@ -82,22 +81,22 @@ describe("outputs", () => {
 
     await generateCodeFromSchema(schema, { outputDirPath });
     const aggregateExampleTSFile = await readGeneratedFile(
-      "/resolvers/outputs/AggregateExample.ts",
+      "/resolvers/outputs/AggregateExample.output.ts",
     );
     const countAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleCountAggregate.ts",
+      "/resolvers/outputs/ExampleCountAggregate.output.ts",
     );
     const avgAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleAvgAggregate.ts",
+      "/resolvers/outputs/ExampleAvgAggregate.output.ts",
     );
     const sumAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleSumAggregate.ts",
+      "/resolvers/outputs/ExampleSumAggregate.output.ts",
     );
     const minAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleMinAggregate.ts",
+      "/resolvers/outputs/ExampleMinAggregate.output.ts",
     );
     const maxAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleMaxAggregate.ts",
+      "/resolvers/outputs/ExampleMaxAggregate.output.ts",
     );
     const outputsIndexTSFile = await readGeneratedFile(
       "/resolvers/outputs/index.ts",
@@ -125,22 +124,22 @@ describe("outputs", () => {
 
     await generateCodeFromSchema(schema, { outputDirPath });
     const aggregateExampleTSFile = await readGeneratedFile(
-      "/resolvers/outputs/AggregateExample.ts",
+      "/resolvers/outputs/AggregateExample.output.ts",
     );
     const countAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleCountAggregate.ts",
+      "/resolvers/outputs/ExampleCountAggregate.output.ts",
     );
     const avgAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleAvgAggregate.ts",
+      "/resolvers/outputs/ExampleAvgAggregate.output.ts",
     );
     const sumAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleSumAggregate.ts",
+      "/resolvers/outputs/ExampleSumAggregate.output.ts",
     );
     const minAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleMinAggregate.ts",
+      "/resolvers/outputs/ExampleMinAggregate.output.ts",
     );
     const maxAggregateTSFile = await readGeneratedFile(
-      "/resolvers/outputs/ExampleMaxAggregate.ts",
+      "/resolvers/outputs/ExampleMaxAggregate.output.ts",
     );
     const outputsIndexTSFile = await readGeneratedFile(
       "/resolvers/outputs/index.ts",
@@ -178,7 +177,7 @@ describe("outputs", () => {
         previewFeatures: ["selectRelationCount"],
       });
       const firstModelCountTSFile = await readGeneratedFile(
-        "/resolvers/outputs/FirstModelCount.ts",
+        "/resolvers/outputs/FirstModelCount.output.ts",
       );
       const outputsIndexTSFile = await readGeneratedFile(
         "/resolvers/outputs/index.ts",
@@ -206,13 +205,13 @@ describe("outputs", () => {
         simpleResolvers: true,
       });
       const aggregateSampleTSFile = await readGeneratedFile(
-        "/resolvers/outputs/AggregateSample.ts",
+        "/resolvers/outputs/AggregateSample.output.ts",
       );
       const avgAggregateTSFile = await readGeneratedFile(
-        "/resolvers/outputs/SampleAvgAggregate.ts",
+        "/resolvers/outputs/SampleAvgAggregate.output.ts",
       );
       const affectedRowsOutputTSFile = await readGeneratedFile(
-        "/resolvers/outputs/AffectedRowsOutput.ts",
+        "/resolvers/outputs/AffectedRowsOutput.output.ts",
       );
 
       expect(aggregateSampleTSFile).toMatchSnapshot("AggregateSample");

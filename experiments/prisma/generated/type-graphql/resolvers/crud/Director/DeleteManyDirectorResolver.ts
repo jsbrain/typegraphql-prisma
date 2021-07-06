@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { DeleteManyDirectorArgs } from "./args/DeleteManyDirectorArgs";
+import { DeleteManyDirectorArgs } from "./args/DeleteManyDirectorArgs.arg";
 import { Director } from "../../../models/Director.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Director)

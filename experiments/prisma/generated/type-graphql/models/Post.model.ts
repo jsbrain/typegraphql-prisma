@@ -3,7 +3,7 @@ import * as GraphQLScalars from "graphql-scalars";
 import { Prisma } from "../../client";
 import { DecimalJSScalar } from "../scalars";
 import { Client } from "../models/Client.model";
-import { PostKind } from "../enums/PostKind";
+import { PostKind } from "../enums/PostKind.enum";
 
 @TypeGraphQL.ObjectType({
   isAbstract: true

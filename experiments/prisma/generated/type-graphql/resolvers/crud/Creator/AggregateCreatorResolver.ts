@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateCreatorArgs } from "./args/AggregateCreatorArgs";
+import { AggregateCreatorArgs } from "./args/AggregateCreatorArgs.arg";
 import { Creator } from "../../../models/Creator.model";
-import { AggregateCreator } from "../../outputs/AggregateCreator";
+import { AggregateCreator } from "../../outputs/AggregateCreator.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Creator)

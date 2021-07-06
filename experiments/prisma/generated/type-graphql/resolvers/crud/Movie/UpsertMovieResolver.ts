@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { UpsertMovieArgs } from "./args/UpsertMovieArgs";
+import { UpsertMovieArgs } from "./args/UpsertMovieArgs.arg";
 import { Movie } from "../../../models/Movie.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

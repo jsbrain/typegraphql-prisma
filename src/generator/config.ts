@@ -59,6 +59,21 @@ export const fileSuffixes = {
   [modelsFolderName]: {
     suffix: modelsSuffix,
   },
+  [enumsFolderName]: {
+    suffix: enumsSuffix,
+  },
+  [inputsFolderName]: {
+    suffix: inputsSuffix,
+  },
+  [outputsFolderName]: {
+    suffix: outputsSuffix,
+  },
+  [resolversFolderName]: {
+    suffix: resolversSuffix,
+  },
+  [argsFolderName]: {
+    suffix: argsSuffix,
+  },
 };
 
 type FolderNameKey = keyof typeof fileSuffixes;

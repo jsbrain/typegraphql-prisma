@@ -1,9 +1,9 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateClientArgs } from "./args/AggregateClientArgs";
+import { AggregateClientArgs } from "./args/AggregateClientArgs.arg";
 import { Client } from "../../../models/Client.model";
-import { AggregateClient } from "../../outputs/AggregateClient";
+import { AggregateClient } from "../../outputs/AggregateClient.output";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 
 @TypeGraphQL.Resolver(_of => Client)

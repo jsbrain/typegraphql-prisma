@@ -1,23 +1,23 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { AggregateCategoryArgs } from "./args/AggregateCategoryArgs";
-import { CreateCategoryArgs } from "./args/CreateCategoryArgs";
-import { CreateManyCategoryArgs } from "./args/CreateManyCategoryArgs";
-import { DeleteCategoryArgs } from "./args/DeleteCategoryArgs";
-import { DeleteManyCategoryArgs } from "./args/DeleteManyCategoryArgs";
-import { FindFirstCategoryArgs } from "./args/FindFirstCategoryArgs";
-import { FindManyCategoryArgs } from "./args/FindManyCategoryArgs";
-import { FindUniqueCategoryArgs } from "./args/FindUniqueCategoryArgs";
-import { GroupByCategoryArgs } from "./args/GroupByCategoryArgs";
-import { UpdateCategoryArgs } from "./args/UpdateCategoryArgs";
-import { UpdateManyCategoryArgs } from "./args/UpdateManyCategoryArgs";
-import { UpsertCategoryArgs } from "./args/UpsertCategoryArgs";
+import { AggregateCategoryArgs } from "./args/AggregateCategoryArgs.arg";
+import { CreateCategoryArgs } from "./args/CreateCategoryArgs.arg";
+import { CreateManyCategoryArgs } from "./args/CreateManyCategoryArgs.arg";
+import { DeleteCategoryArgs } from "./args/DeleteCategoryArgs.arg";
+import { DeleteManyCategoryArgs } from "./args/DeleteManyCategoryArgs.arg";
+import { FindFirstCategoryArgs } from "./args/FindFirstCategoryArgs.arg";
+import { FindManyCategoryArgs } from "./args/FindManyCategoryArgs.arg";
+import { FindUniqueCategoryArgs } from "./args/FindUniqueCategoryArgs.arg";
+import { GroupByCategoryArgs } from "./args/GroupByCategoryArgs.arg";
+import { UpdateCategoryArgs } from "./args/UpdateCategoryArgs.arg";
+import { UpdateManyCategoryArgs } from "./args/UpdateManyCategoryArgs.arg";
+import { UpsertCategoryArgs } from "./args/UpsertCategoryArgs.arg";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 import { Category } from "../../../models/Category.model";
-import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput";
-import { AggregateCategory } from "../../outputs/AggregateCategory";
-import { CategoryGroupBy } from "../../outputs/CategoryGroupBy";
+import { AffectedRowsOutput } from "../../outputs/AffectedRowsOutput.output";
+import { AggregateCategory } from "../../outputs/AggregateCategory.output";
+import { CategoryGroupBy } from "../../outputs/CategoryGroupBy.output";
 
 @TypeGraphQL.Resolver(_of => Category)
 export class CategoryCrudResolver {

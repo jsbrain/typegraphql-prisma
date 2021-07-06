@@ -1,26 +1,25 @@
+import path from "path";
 import {
-  PropertyDeclarationStructure,
+  GetAccessorDeclarationStructure,
   OptionalKind,
   Project,
-  GetAccessorDeclarationStructure,
+  PropertyDeclarationStructure,
   SetAccessorDeclarationStructure,
   Writers,
 } from "ts-morph";
-import path from "path";
-
-import { outputsFolderName, inputsFolderName } from "./config";
-import {
-  generateTypeGraphQLImport,
-  generateInputsImports,
-  generateEnumsImports,
-  generateArgsImports,
-  generateGraphQLScalarsImport,
-  generatePrismaNamespaceImport,
-  generateOutputsImports,
-  generateCustomScalarsImport,
-} from "./imports";
+import { getFileSuffix, inputsFolderName, outputsFolderName } from "./config";
 import { DmmfDocument } from "./dmmf/dmmf-document";
 import { DMMF } from "./dmmf/types";
+import {
+  generateArgsImports,
+  generateCustomScalarsImport,
+  generateEnumsImports,
+  generateGraphQLScalarsImport,
+  generateInputsImports,
+  generateOutputsImports,
+  generatePrismaNamespaceImport,
+  generateTypeGraphQLImport,
+} from "./imports";
 import { GenerateCodeOptions } from "./options";
 
 export function generateOutputTypeClassFromType(
@@ -30,7 +29,10 @@ export function generateOutputTypeClassFromType(
   dmmfDocument: DmmfDocument,
 ) {
   const fileDirPath = path.resolve(dirPath, outputsFolderName);
-  const filePath = path.resolve(fileDirPath, `${type.typeName}.ts`);
+  const filePath = path.resolve(
+    fileDirPath,
+    `${type.typeName}${getFileSuffix(outputsFolderName)}.ts`,
+  );
   const sourceFile = project.createSourceFile(filePath, undefined, {
     overwrite: true,
   });
@@ -108,7 +110,7 @@ export function generateInputTypeClassFromType(
   const filePath = path.resolve(
     dirPath,
     inputsFolderName,
-    `${inputType.typeName}.ts`,
+    `${inputType.typeName}${getFileSuffix(inputsFolderName)}.ts`,
   );
   const sourceFile = project.createSourceFile(filePath, undefined, {
     overwrite: true,

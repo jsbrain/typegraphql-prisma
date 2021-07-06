@@ -1,7 +1,7 @@
 import * as TypeGraphQL from "type-graphql";
 import graphqlFields from "graphql-fields";
 import { GraphQLResolveInfo } from "graphql";
-import { CreateDirectorArgs } from "./args/CreateDirectorArgs";
+import { CreateDirectorArgs } from "./args/CreateDirectorArgs.arg";
 import { Director } from "../../../models/Director.model";
 import { transformFields, getPrismaFromContext, transformCountFieldIntoSelectRelationsCount } from "../../../helpers";
 

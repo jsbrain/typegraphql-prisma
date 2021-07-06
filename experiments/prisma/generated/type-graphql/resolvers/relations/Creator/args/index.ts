@@ -1,2 +1,2 @@
-export { CreatorLikesArgs } from "./CreatorLikesArgs";
-export { CreatorProblemsArgs } from "./CreatorProblemsArgs";
+export { CreatorLikesArgs } from "./CreatorLikesArgs.arg";
+export { CreatorProblemsArgs } from "./CreatorProblemsArgs.arg";
