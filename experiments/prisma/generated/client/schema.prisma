@@ -21,105 +21,112 @@ generator typegraphql {
   useUncheckedScalarInputs = false
 }
 
-enum TrafficSourceName {
-  CONTENT_AD
-  OUTBRAIN
-  TABOOLA
+// Role enum comment
+/// Role enum doc
+enum Role {
+  USER
+  ADMIN
 }
 
-model TrafficSource {
-  id        String            @id @default(cuid())
-  name      TrafficSourceName @unique
-  clickData ClickData[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+// User model comment
+/// User model doc
+/// @@TypeGraphQL.type(name: "Client")
+model User {
+  // User model field comment
+  /// User model field doc
+  id          Int      @id @default(autoincrement())
+  email       String   @unique
+  /// renamed field doc
+  /// @TypeGraphQL.field(name: "firstName")
+  name        String?
+  age         Int
+  /// @TypeGraphQL.field(name: "accountBalance")
+  balance     Numeric
+  amount      Float
+  /// @TypeGraphQL.field(name: "clientPosts")
+  posts       post[]   @relation("posts")
+  role        Role
+  /// @TypeGraphQL.omit(output: true)
+  editorPosts post[]   @relation("editorPosts")
+  grades      Int[]
+  aliases     String[]
 }
 
-model ClickData {
-  id              String        @id @default(cuid())
-  trafficSource   TrafficSource @relation(fields: [trafficSourceId], references: [id])
-  trafficSourceId String
-  // Metrics
-  date            DateTime
-  campaignId      Int
-  campaignName    String
-  adId            Int?
-  device          String
-  country         String?
-  domainId        Int
-  clicks          Int
-  spend           Float
-  excludedClicks  Int
-  conversions     Int
-  ecpc            Float
-  ecpa            Float
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  // @@index([campaignId, adId, domainId])
-  // TODO: Do we really want separate indexes?
-  @@index([campaignId])
-  @@index([adId])
-  @@index([domainId])
+enum PostKind {
+  BLOG
+  ADVERT
 }
 
-enum AccountType {
-  /// Bing Ads account type
-  BING_ADS
-  /// Google Ads account type
-  GOOGLE_ADS
-  CLICKBANK
-  MAXWEB
+model post {
+  uuid      String    @id @default(uuid())
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  published Boolean
+  title     String
+  /// @TypeGraphQL.omit(output: true)
+  subtitle  String
+  content   String?
+  author    User      @relation(fields: [authorId], references: [id], name: "posts", onDelete: Cascade)
+  authorId  Int
+  /// @TypeGraphQL.omit(output: true)
+  editor    User?     @relation(fields: [editorId], references: [id], name: "editorPosts", onDelete: Cascade)
+  /// @TypeGraphQL.omit(output: true)
+  editorId  Int?
+  kind      PostKind?
+  metadata  Json
 }
 
-model FunnelAccount {
-  id      String      @id @default(cuid())
-  /// Type of the account to enable acount linking if type differs.
-  type    AccountType
-  /// Name or identifier of the account. If account is an affiliate account, this should be set to the affiliate id.
-  name    String      @unique
-  domains Domain[] /// Domains linked to the account. Only applies to certain account types.
+model Category {
+  name   String
+  slug   String
+  number Int
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  Funnel   Funnel? @relation(fields: [funnelId], references: [id])
-  funnelId String?
-
-  @@index([name])
+  @@unique([slug, number])
 }
 
-model Domain {
-  id           String    @id @default(cuid())
-  name         String    @unique
-  state        String // Change to enum (new,stale,burned,etc.)
-  creationDate DateTime? /// When domain was first rent. // TODO: Change to required
+model Patient {
+  firstName String
+  lastName  String
+  email     String
 
-  // Internal
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  FunnelAccount   FunnelAccount? @relation(fields: [funnelAccountId], references: [id])
-  funnelAccountId String?
+  @@id([firstName, lastName])
 }
 
-model Funnel {
-  id               String    @id @default(cuid())
-  name             String
-  order            Int?      @unique /// Order for list sorting
-  trafficFirstSeen DateTime? /// Used for later on analytics and data crunching
+model Movie {
+  directorFirstName String
+  directorLastName  String
+  director          Director @relation(fields: [directorFirstName, directorLastName], references: [firstName, lastName], onDelete: Cascade)
+  title             String
 
-  // TODO: Maybe change this to Profiles in general to be compatible with other providers (e.g. crown)
-  cards          Int[]  @unique
-  browserProfile String @unique
+  @@id([directorFirstName, directorLastName, title])
+}
 
-  linkedAccounts FunnelAccount[] /// Accounts linked to the funnel, to track all belonging settings etc.
+model Director {
+  firstName String
+  lastName  String
+  movies    Movie[]
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  @@id([firstName, lastName])
+}
 
-  // Test if this works, so each combination is purely unique
-  @@index([name, cards, browserProfile])
+model Problem {
+  id          Int       @id @default(autoincrement())
+  problemText String
+  likedBy     Creator[]
+  creator     Creator?  @relation(name: "creator", fields: [creatorId], references: [id], onDelete: Cascade)
+  creatorId   Int?
+}
+
+model Creator {
+  id       Int       @id @default(autoincrement())
+  name     String
+  likes    Problem[]
+  problems Problem[] @relation("creator")
+}
+
+model NativeTypeModel {
+  id      Int      @id @default(autoincrement()) @postgres.Integer
+  bigInt  BigInt?  @postgres.BigInt
+  byteA   Bytes?   @postgres.ByteA
+  decimal Decimal? @postgres.Decimal
 }

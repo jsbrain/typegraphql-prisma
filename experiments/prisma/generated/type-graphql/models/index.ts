@@ -1,5 +1,9 @@
-export { ClickData } from "./ClickData.model";
-export { Domain } from "./Domain.model";
-export { Funnel } from "./Funnel.model";
-export { FunnelAccount } from "./FunnelAccount.model";
-export { TrafficSource } from "./TrafficSource.model";
+export { Category } from "./Category.model";
+export { Client } from "./Client.model";
+export { Creator } from "./Creator.model";
+export { Director } from "./Director.model";
+export { Movie } from "./Movie.model";
+export { NativeTypeModel } from "./NativeTypeModel.model";
+export { Patient } from "./Patient.model";
+export { Post } from "./Post.model";
+export { Problem } from "./Problem.model";

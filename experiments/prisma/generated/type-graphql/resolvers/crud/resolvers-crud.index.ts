@@ -1,5 +1,9 @@
-export { ClickDataCrudResolver } from "./ClickData/ClickDataCrudResolver";
-export { DomainCrudResolver } from "./Domain/DomainCrudResolver";
-export { FunnelCrudResolver } from "./Funnel/FunnelCrudResolver";
-export { FunnelAccountCrudResolver } from "./FunnelAccount/FunnelAccountCrudResolver";
-export { TrafficSourceCrudResolver } from "./TrafficSource/TrafficSourceCrudResolver";
+export { CategoryCrudResolver } from "./Category/CategoryCrudResolver";
+export { ClientCrudResolver } from "./Client/ClientCrudResolver";
+export { CreatorCrudResolver } from "./Creator/CreatorCrudResolver";
+export { DirectorCrudResolver } from "./Director/DirectorCrudResolver";
+export { MovieCrudResolver } from "./Movie/MovieCrudResolver";
+export { NativeTypeModelCrudResolver } from "./NativeTypeModel/NativeTypeModelCrudResolver";
+export { PatientCrudResolver } from "./Patient/PatientCrudResolver";
+export { PostCrudResolver } from "./Post/PostCrudResolver";
+export { ProblemCrudResolver } from "./Problem/ProblemCrudResolver";

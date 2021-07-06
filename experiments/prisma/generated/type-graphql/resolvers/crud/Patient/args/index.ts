@@ -1,0 +1,12 @@
+export { AggregatePatientArgs } from "./AggregatePatientArgs.arg";
+export { CreateManyPatientArgs } from "./CreateManyPatientArgs.arg";
+export { CreatePatientArgs } from "./CreatePatientArgs.arg";
+export { DeleteManyPatientArgs } from "./DeleteManyPatientArgs.arg";
+export { DeletePatientArgs } from "./DeletePatientArgs.arg";
+export { FindFirstPatientArgs } from "./FindFirstPatientArgs.arg";
+export { FindManyPatientArgs } from "./FindManyPatientArgs.arg";
+export { FindUniquePatientArgs } from "./FindUniquePatientArgs.arg";
+export { GroupByPatientArgs } from "./GroupByPatientArgs.arg";
+export { UpdateManyPatientArgs } from "./UpdateManyPatientArgs.arg";
+export { UpdatePatientArgs } from "./UpdatePatientArgs.arg";
+export { UpsertPatientArgs } from "./UpsertPatientArgs.arg";

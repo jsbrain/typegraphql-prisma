@@ -1,0 +1,12 @@
+export { AggregateNativeTypeModelArgs } from "./AggregateNativeTypeModelArgs.arg";
+export { CreateManyNativeTypeModelArgs } from "./CreateManyNativeTypeModelArgs.arg";
+export { CreateNativeTypeModelArgs } from "./CreateNativeTypeModelArgs.arg";
+export { DeleteManyNativeTypeModelArgs } from "./DeleteManyNativeTypeModelArgs.arg";
+export { DeleteNativeTypeModelArgs } from "./DeleteNativeTypeModelArgs.arg";
+export { FindFirstNativeTypeModelArgs } from "./FindFirstNativeTypeModelArgs.arg";
+export { FindManyNativeTypeModelArgs } from "./FindManyNativeTypeModelArgs.arg";
+export { FindUniqueNativeTypeModelArgs } from "./FindUniqueNativeTypeModelArgs.arg";
+export { GroupByNativeTypeModelArgs } from "./GroupByNativeTypeModelArgs.arg";
+export { UpdateManyNativeTypeModelArgs } from "./UpdateManyNativeTypeModelArgs.arg";
+export { UpdateNativeTypeModelArgs } from "./UpdateNativeTypeModelArgs.arg";
+export { UpsertNativeTypeModelArgs } from "./UpsertNativeTypeModelArgs.arg";

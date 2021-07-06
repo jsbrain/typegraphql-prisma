@@ -1,6 +1,6 @@
 {
   "name": "jsbrain-typegraphql-prisma",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "scripts": {
     "build": "tsc",
     "package:build": "./package.sh",

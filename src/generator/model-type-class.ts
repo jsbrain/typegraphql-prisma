@@ -86,8 +86,6 @@ export default function generateObjectTypeClassFromModel(
           field.isOmitted.output ||
           (!field.isRequired && field.typeFieldAlias === undefined);
 
-        console.log("FILED", field);
-
         return {
           name: field.name,
           // type: field.fieldTSType,
