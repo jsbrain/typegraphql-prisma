@@ -45,7 +45,7 @@ export namespace DMMF {
     | "outputObjectTypes"
     | "enumTypes";
   export interface Field {
-    // kind: FieldKind;
+    kind: FieldKind; // TODO: Why was this disabled?
     name: string;
     isRequired: boolean;
     isList: boolean;

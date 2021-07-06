@@ -18,7 +18,7 @@ export class TrafficSource {
   @TypeGraphQL.Field(_type => TrafficSourceName, {
     nullable: false
   })
-  name!: "CONTENT_AD" | "OUTBRAIN" | "TABOOLA";
+  name!: TrafficSourceName;
 
   clickData?: ClickData[];
 

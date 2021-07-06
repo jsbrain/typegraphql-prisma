@@ -21,7 +21,7 @@ export class FunnelAccount {
     nullable: false,
     description: "Type of the account to enable acount linking if type differs."
   })
-  type!: "BING_ADS" | "GOOGLE_ADS" | "CLICKBANK" | "MAXWEB";
+  type!: AccountType;
 
   /** Name or identifier of the account. If account is an affiliate account, this should be set to the affiliate id. */
   @TypeGraphQL.Field(_type => String, {

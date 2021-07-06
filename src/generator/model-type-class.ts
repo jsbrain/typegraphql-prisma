@@ -86,9 +86,13 @@ export default function generateObjectTypeClassFromModel(
           field.isOmitted.output ||
           (!field.isRequired && field.typeFieldAlias === undefined);
 
+        console.log("FILED", field);
+
         return {
           name: field.name,
-          type: field.fieldTSType,
+          // type: field.fieldTSType,
+          // ! Enable direct enum usage
+          type: field.kind === "enum" ? field.type : field.fieldTSType,
           hasExclamationToken: !isOptional,
           hasQuestionToken: isOptional,
           trailingTrivia: "\r\n",

@@ -21,7 +21,7 @@ export default function generateEnumFromDef(
 
   sourceFile.addEnum({
     isExported: true,
-    name: enumDef.typeName,
+    name: `${enumDef.typeName}`,
     ...(enumDef.docs && {
       docs: [{ description: enumDef.docs }],
     }),
